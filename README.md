@@ -2,8 +2,10 @@
 This is where my notes for the CompTIA Data+ exam will be kept.
 
 ---
+<details>
+<summary><strong>Exam Objectives Summary</strong></summary>
 
-## Exam Objectives Summary 
+---
 
 <details>
 <summary><strong>Data Concepts and Environments (20%)</strong></summary>
@@ -38,7 +40,7 @@ This is where my notes for the CompTIA Data+ exam will be kept.
 - Natural language processing
 - Robotic automation
 
-</details>
+</details> <!-- Ends Data Concepts and Environments -->
 
 ---
 
@@ -60,7 +62,7 @@ This is where my notes for the CompTIA Data+ exam will be kept.
 - Parsing
 - Formatting data
 
-</details>
+</details> <!-- Ends Acquisition and Preparation -->
 
 ---
 
@@ -77,7 +79,7 @@ This is where my notes for the CompTIA Data+ exam will be kept.
 - Use tools and resources to resolve problems.
 
   
-</details>
+</details> <!-- Ends data Analysis -->
 
 ---
 
@@ -96,7 +98,7 @@ This is where my notes for the CompTIA Data+ exam will be kept.
 **Validate Reporting Accuracy:**
 - Apply validation and review to solve reporting issues
   
-</details>
+</details> <!-- Ends Visualization and Reporting -->
 
 ---
 
@@ -124,9 +126,14 @@ This is where my notes for the CompTIA Data+ exam will be kept.
 - Testing for data quality
 
   
-</details>
+</details> <!-- Ends Data Governance -->
+
+
+</details> <!-- Ends the Objectives Summary -->
 
 ---
+
+
 
 
 
