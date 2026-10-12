@@ -1,5 +1,13 @@
 # CompTIA Data+ DAO-002 Notes
 This is where my notes for the CompTIA Data+ exam will be kept.
+<details>
+<summary><strong></strong>CompTIA Data+ Study Guide Exam DAO-002</summary>
+
+by Mike Chapple and Sharif Nijim  
+Copyright 2025 by John Wiley & Sons, Inc.  
+ISBN: 9781394320912
+
+</details>
 
 ---
 <details>
@@ -132,6 +140,56 @@ This is where my notes for the CompTIA Data+ exam will be kept.
 </details> <!-- Ends the Objectives Summary -->
 
 ---
+
+<details>
+<summary><strong>Chapters</strong></summary>
+
+Notes listed by chapters. 
+
+<details>
+<summary><strong>Chapter 1: Today's Data Analyst</strong></summary>
+
+## Chapter 1: Today's Data Analyst
+
+### Domains
+
+**1.0: Data Concepts and Environments**
+- 1.5. Identify artificial intelligence (AI) concepts
+
+**3.0: Data Analysis**
+- 3.2. Given a scenario, select the appropriate statistical method or function
+
+
+
+
+</details>
+
+
+
+  
+</details> <!-- Ends Chapters -->
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
