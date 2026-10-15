@@ -210,6 +210,49 @@ Seeks optimization by simulating many scenarios.
 
 ### Machine Learning, Artificial Intelligence, and Deep Learning
 
+**Artificial Intelligence (AI)**  
+*AI* is when you attempt to get a computer to act like a human.
+
+**Machine Learning**  
+*Machine learning* a subset of AI that processes your datasets through algorithms to gain knowledge to better assist you. This applies to a wide variety of fields. The most common cases are:
+- Understanding customers and what appeals to different groups.
+- Searching log files for anomalies that could indicate cyber attacks.
+- Sales predictions based on the market.
+
+**Deep Learning**  
+*Deep learning* is highly specialized subdivision of machine learning most commonly used for image, video, and sound analysis.
+
+**Generative AI**  
+*Generative AI* is focused on creating new content (text, images, music, and videos). Examples are ChatGPT, Claude, or Midjourney. 
+They use *Large Language Models* called *foundational models* that are trained on massive datasets. 
+
+---
+
+### Robotic Process Automation
+
+The process of automating repetitive, rule-based tasks is called *Robotic Process Automation* (RPA). The systems that use this software are called robots or "bots".
+The bots can streamline data collection by accessing multiple sources and consolidating the data into a central database. Then, perform data analysis on it. They can 
+pull data from various systems, organize it, and generate a report formatted to meet the organizations needs. 
+
+---
+
+### Data Governance
+
+*Data governance* sets the organizations quality and control standards for data collection. This process ensures the data is accurate and secure.
+
+---
+
+### Analytics Tools
+
+*Analytics tools* are used to automate much of the heavy data analytics process. 
+- Tools like Microsoft Excel and Google Sheets are used to create spreadsheets. 
+- Rstudio to help program in the R programming language
+
+
+---
+
+### Summary
+
 
 
 
