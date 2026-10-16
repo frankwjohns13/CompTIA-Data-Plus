@@ -198,10 +198,10 @@ Results are usually shared through reports and dashboards. Reports capture a poi
 Data is displayed using statistics (e.g., sums, totals, percentages, frequencies). 
 
 **Inferential Analytics**  
-Uses a sample of a given population to make general assumption regarding the population as a whole. 
+Uses a sample of a given population to make general inferences about the population as a whole. 
 
 **Predictive Analytics**  
-Bases the probability of future events based on existing data. 
+Estimates the probability of future events from existing data. 
 
 **Prescriptive Analytics**  
 Seeks optimization by simulating many scenarios. 
@@ -214,7 +214,7 @@ Seeks optimization by simulating many scenarios.
 *AI* is when you attempt to get a computer to act like a human.
 
 **Machine Learning**  
-*Machine learning* a subset of AI that processes your datasets through algorithms to gain knowledge to better assist you. This applies to a wide variety of fields. The most common cases are:
+*Machine learning* a subset of AI that uses algorithms to learn patterns from data.
 - Understanding customers and what appeals to different groups.
 - Searching log files for anomalies that could indicate cyber attacks.
 - Sales predictions based on the market.
@@ -223,7 +223,7 @@ Seeks optimization by simulating many scenarios.
 *Deep learning* is highly specialized subdivision of machine learning most commonly used for image, video, and sound analysis.
 
 **Generative AI**  
-*Generative AI* is focused on creating new content (text, images, music, and videos). Examples are ChatGPT, Claude, or Midjourney. 
+*Generative AI* foundational models are the large models trained on huge datasets; LLMs are the common type used for text. 
 They use *Large Language Models* called *foundational models* that are trained on massive datasets. 
 
 ---
@@ -248,42 +248,34 @@ pull data from various systems, organize it, and generate a report formatted to 
 - Tools like Microsoft Excel and Google Sheets are used to create spreadsheets. 
 - Rstudio to help program in the R programming language
 
+---
+
+### Summary – Objectives Covered in Chapter 1
+
+**1.5 Identify artificial intelligence (AI) concepts**
+- **Artificial intelligence (AI):** systems designed to perform tasks that typically require human intelligence
+- **Machine learning (ML):** subset of AI; algorithms learn patterns from data (customer segmentation, log anomaly detection, sales forecasting)
+- **Deep learning:** specialized ML, often used for image, video, and audio analysis
+- **Generative AI:** creates new content (text, images, music, video); examples include ChatGPT, Claude, Midjourney
+- **Foundational models / large language models (LLMs):** large models trained on massive datasets that power many generative AI tools
+- **Robotic process automation (RPA):** software “bots” that automate repetitive, rule-based tasks (collect data, consolidate sources, format reports)
+
+**3.2 Given a scenario, select the appropriate statistical method or function**  
+*(Chapter 1 introduces the analytics types that drive method choice; deeper stats come later.)*
+- **Descriptive analytics:** summarize what happened (sums, totals, percentages, frequencies)
+- **Inferential analytics:** use a sample to draw conclusions about a larger population
+- **Predictive analytics:** estimate likelihood of future outcomes from historical data
+- **Prescriptive analytics:** recommend or simulate actions to optimize outcomes
+
+**Related concepts (supporting context)**
+- **Analytics process:** Acquisition → Cleaning & Manipulation → Analysis (often starts with EDA) → Visualization → Reporting & Communication
+- **Data sources:** internal (e.g., sales reports) vs external (e.g., census data)
+- **Data governance:** organizational standards for data quality, control, accuracy, and security
+- **Common tools:** spreadsheets (Excel, Google Sheets); programming environments (e.g., RStudio for R)
 
 ---
 
-### Summary
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**End of Chapter 1**
 
 </details> <!-- Ends Chapter 1 -->
 
