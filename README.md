@@ -292,40 +292,154 @@ pull data from various systems, organize it, and generate a report formatted to 
 - 1.3 Identify infrastructure concepts
 - 1.4 Identify common data analysis tools
 
+---
 
-  
+### Spreadsheets
+
+The most widely used tool in analytics. They organize data into rows and columns. They are great for mathematical calculations, creating graphs and charts, and communicating reports. 
+
+MS Excel is one of the most common spreadsheet software. 
+
+---
+
+### Programming Languages
+
+**R**  
+Popular among analysts because it is focused on creating analytic applications. It often comes with an *Integrated Development Environment* (IDE).
+
+**Python**  
+Arguably the most popular programming language. It is a general-purpose language. 
+
+**Anaconda**  
+Open source distribution for python/R that simplifies packages, dependencies, and environments.
+
+**Scala**  
+Powerful language that blends object-oriented and functional programming paradigms. 
+
+**SAS**  
+Statistical package and programming language. Can be used to automate repetitive tasks.
+
+---
+
+### Databases and SQL
+
+The *Structured Query Language* is used to interact with databases. It is divided into two parts: Data Definition Language (DDL) and Data Manipulation Language (DML).
+
+**Major DDL commands:**  
+
+| **Command** | **Purpose**                            |
+|-------------|----------------------------------------|
+| `CREATE`    | Create a new table within the database |
+| `ALTER`     | Modifies a table's structure           |
+| `DROP`      | Deletes an entire table                |
 
 
+**Major DML commands:**
+
+| **Command** | **Purpose**                           |
+|-------------|---------------------------------------|
+| `SELECT`    | Retrieves information from a database |
+| `INSERT`    | Adds new records to a database        |
+| `UPDATE`    | Modifies rows in a database           |
+| `DELETE`    | Deletes rows from a database table    |
 
 
+**Tools:**
+- Azure Data Studio
+- MySQL Workbench
+- Compass
+- DBeaver
+- Toad
+- Microsoft's SQL Server Management Studio
 
+---
 
+### Business Intelligence Software
 
+"Allows analysts to ingest and clean data, perform statistical analysis, visualize data, produce models, make predictions, 
+and communicate and report results."
 
+**PowerBI "SaaS":** (Microsoft's cloud/Saas layer) Popular among organizations that use other Microsoft products.
 
+Major Components:
+- Power BI desktop
+- Microsoft's Software as a Service (SaaS)
+- Mobile works on iOS, Android, and Windows
+- Report Builder - create paginated reports
+- Report Server - organizations can host their own environment
 
+**Tableau:** Most popular data visualization tool. Focuses on easy ingestion of data from a variety of sources
 
+**Looker:** Popular SaaS with access to cloud-based analytics. Powered by Google.
 
+---
 
+### Cloud Infrastructure
 
+Cloud computing is the delivery of services over a network
 
+**Cloud Computing Reasons:**
+- On-demand, self-service computing
+- Scalability
+  - Horizontal Scaling: Adding more servers
+  - Vertical Scaling: Increasing capacity of existing servers
+- Elasticity: The ability to increase and decrease capacity
 
+**Cloud Service Concepts:**
+- Software as a Service (SaaS): Provider delivers an entire application to the customer
+- Infrastructure as a Service (IaaS): Provides basic computing resources
+  - Computing Resources
+    - Virtual Machines
+    - Containers
+  - Storage Resources
+    - Object Storage: great for unstructured data
+    - Block Storage: breaks data into fixed-sizes
+    - File Storage: hierarchical structure
+    - Local Storage: attached directly to a virtual machine
+    - Shared Storage: allows VMs or Containers to access the same storage
+-Platform as a Service (PaaS): A platform to run your own applications
 
+**Cloud Deployment Models:**
+- On-premises/private: The organization builds its own cloud
+- Public: Uses multitenancy in which it builds a giant infrastructure and carves out pieces to customers
+- Hybrid: Combines a private and public server
 
+**Common Public Cloud Providers:**
+- Amazon Web Services
+- Microsoft Azure
+- Google Cloud Platform
 
+---
 
+### Exam Essentials
 
+**Role of spreadsheets:**  
+Spreadsheets are productivity software designed to create documents that organize any data type into rows and columns
 
+**How programming languages are used:**  
+Programming languages are used to create analysis tools
 
+**Know how analysts and developers interact with databases:**  
+- They use SQL to interact with databases.
+- Analysts lean on DML (SELECT/INSERT/UPDATE/DELETE);
+- Schema work is DDL (CREATE/ALTER/DROP).
+- Some materials also call SELECT DQL.
 
+**Role of Business Intelligence:**  
+Tools used to ingest and clean data, statistical analysis, visualization, produce models, make predictions, and communicate and report.
 
+**Role of Cloud Providers:**  
+Deliver scalability, on-demand infrastructure.
 
+**Different cloud and on-premises models:**  
+Private, public, and hybrid
 
+**Types of data storage and use cases:**  
+Cloud storage, object storage, file storage
 
+---
 
-
-
-
+**End of Chapter 2**
 
 </details> <!-- Ends Chapter 2 -->
 
