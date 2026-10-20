@@ -491,39 +491,162 @@ Cloud storage, object storage, file storage
 
 ### Domains
 
+**1.0 Data concepts and Environments**
+- 1.1 Explain data concepts
+
+---
+
+### Data Building Blocks
+
+**Data Element**  
+An element is an attribute about a person, place, or thing. They also describe characteristics of activities: 
+orders, transactions, and events. Element names are usually column headings and their values make up the rows for that element.
+
+**Data Type**  
+Data types limit the values a data element can have.
+
+---
+
+### Exploring Data Types
+
+**Tabular Data**  
+Data that is organized into tables made up of columns and rows. Columns are fields and rows are records.
+
+**Strings**  
+Strings are the most widely used data type for storing character-based data.
+
+**Numeric**  
+If the element will deal exclusively with number values.
+- **Integers:** store whole numbers (..., -2, -1, 0, 1, 2, ...)
+- **Float:** (Floating Point, Decimals) store numbers that contain a decimal. (-1.5, 3.25, 6.0)
+
+**Boolean**  
+Hold a single bit (1 or 0). Often used for True/False calculations
+
+**Date and Time**  
+Hold date, day of the year, and time of day values. 
+
+**Spatial Values**  
+Used for geographic and geometric data.
+-  **Geographic:** holds locations and shapes on Earth's surface. (Typically Latitude and Longitude)
+-  **Geometric:** describe shapes and objects in a two-dimensional space.
+
+**Unique Identifiers**  
+Used to ensure every record, object, or resource can be distinctly recognized.
+
+**Currency**  
+Formats numerical values so it can be displayed in a specific way easily identifiable as that country's currency.
+
+**Binary**  
+Most common for storing unstructured data called Binary Large Objects (BLObs)
+
+**Large Text**  
+Classified as unstructured due to the need to detect nuance, humor, sarcasm, and inferential meaning.
+
+---
+
+### Common Data Structures
+
+Data can be classified into three categories:
+- **Structured:** Stored in a consistent, defined manner, organized into columns and rows. 
+- **Unstructured:** Characteristics about an event or object (Images, phrases, audio, video, and descriptive text)
+- **Semi-Structured:** Data that has structure but not tabular. (example: emails)
+
+**Dimensional Data**  
+Contains groupings of individual attributes about a given subject and organizes data into **Fact Tables** and **Dimension Tables**. 
+- Fact Tables store measurement data.
+- Dimensions tables contain data about the fact.
+
+---
+
+### Classifications
+
+**Quantitative vs. Qualitative**  
+- Quantitative data consists of numeric values that answer the questions, "How many? or How much?"
+- Qualitative data frequently consists of text and answers the questions, "Why? What?" (characteristics, traits, and attributes)
+
+**Discrete vs. Continuous**
+- Discrete uses whole numbers and is used for things that cannot be divided. (Example: Number of children in a classroom)
+- Continuous can contain decimal and is used for things measured on a scale. (Examples: Height, weight, averages)
+
+**Categorical**  
+Text data that has a known finite number of categories. (Examples: Departments (HR, IT, Admin...) or Status (Up, Down, Suspended...))  
+*These categories can be expanded through table modifications.*
+
+---
+
+### Common File Formats
+
+**Text Files**  
+Text files contain plain text and are limited to alphanumeric values
+- delimiter is a character that separates fields
+- Comma-Separated Values(CSV) uses a comma
+
+**JavaScript Object Notation (JSON)**  
+Open standard used to add structure to a text file without adding significant overhead.
+
+**Extensible Markup Language (XML)**  
+Facilitates adding structure to a text file with more overhead than JSON.
+
+**Hypertext Markup Language (HTML)**  
+Used to format documents that are designed to be displayed in a web-browser.
+
+---
+
+### Exam Essentials
+- Choose a data type based on the values you will store (and their limits).
+- You can often format values for display later; storage type still matters for accuracy and operations.
+- Structured = rows/columns; unstructured = free-form (text, images, audio, video); semi-structured = some structure but not fully tabular (e.g., email, JSON-ish content).
+- Quantitative = numeric (“how many / how much”); qualitative = descriptive (“what / why”).
+- Discrete = countable whole values; continuous = measurable values that can include decimals.
+- Categorical = limited set of labels/categories (can grow over time).
+- Dimensional models use fact tables (measurements) and dimension tables (context about the facts).
+- Know common file formats: delimited text/CSV, JSON (light structure), XML (heavier structure), HTML (web display).
+
+---
+
+### Cliff Notes – Objectives Covered in Chapter 3
+
+**1.1 Explain data concepts**
+
+**Data building blocks**
+- **Data element:** attribute of a person, place, thing, or activity (often a column); values fill the rows
+- **Data type:** restricts what values an element can hold
+
+**Common data types**
+- **String** — character data (most common text type)
+- **Numeric** — integers (whole numbers) and floats/decimals (fractional)
+- **Boolean** — true/false (often 1/0)
+- **Date/time** — dates, times, timestamps
+- **Spatial** — geographic (Earth locations) vs geometric (2D shapes)
+- **Unique identifiers** — distinctly identify records/objects
+- **Currency** — numeric values formatted as money
+- **Binary / BLOB** — unstructured binary (files, images)
+- **Large text** — long free-form text (nuance/meaning; often treated as unstructured)
+
+**How data is organized**
+- **Structured** — consistent rows/columns (tabular)
+- **Unstructured** — images, audio, video, free descriptive text
+- **Semi-structured** — some structure, not fully tabular (e.g., email)
+
+**How data is classified**
+- **Quantitative** — numbers (“how many / how much?”)
+- **Qualitative** — text/traits (“what / why?”)
+- **Discrete** — countable whole values (e.g., number of children in a class)
+- **Continuous** — measured on a scale; can include decimals (height, weight, averages)
+- **Categorical** — finite set of categories/labels (set can expand)
+- **Dimensional** — fact tables (measurements) + dimension tables (attributes about the facts)
+
+**Common file formats**
+- **Text / CSV** — plain text; delimiter separates fields (CSV uses commas)
+- **JSON** — lightweight structure on text
+- **XML** — structure with more overhead than JSON
+- **HTML** — documents meant for web browsers
 
 
+---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**End of Chapter 3**
 
 
 </details> <!-- Ends Chapter 3 -->
@@ -538,6 +661,7 @@ Cloud storage, object storage, file storage
 
 ### Domains
   
+
 
 
 
