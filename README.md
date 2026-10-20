@@ -250,7 +250,7 @@ pull data from various systems, organize it, and generate a report formatted to 
 
 ---
 
-### Summary – Objectives Covered in Chapter 1
+### Cliff Notes – Objectives Covered in Chapter 1
 
 **1.5 Identify artificial intelligence (AI) concepts**
 - **Artificial intelligence (AI):** systems designed to perform tasks that typically require human intelligence
