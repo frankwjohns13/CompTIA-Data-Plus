@@ -305,7 +305,7 @@ MS Excel is one of the most common spreadsheet software.
 ### Programming Languages
 
 **R**  
-Popular among analysts because it is focused on creating analytic applications. It often comes with an *Integrated Development Environment* (IDE).
+Popular among analysts because it is focused on statistics and analytic applications. It often comes with an *Integrated Development Environment* (IDE).
 
 **Python**  
 Arguably the most popular programming language. It is a general-purpose language. 
@@ -392,8 +392,8 @@ Cloud computing is the delivery of services over a network
     - Virtual Machines
     - Containers
   - Storage Resources
-    - Object Storage: great for unstructured data
-    - Block Storage: breaks data into fixed-sizes
+    - Object Storage: unstructured/blobs
+    - Block Storage: fixed-size volumes (VMs/DBs)
     - File Storage: hierarchical structure
     - Local Storage: attached directly to a virtual machine
     - Shared Storage: allows VMs or Containers to access the same storage
@@ -436,6 +436,44 @@ Private, public, and hybrid
 
 **Types of data storage and use cases:**  
 Cloud storage, object storage, file storage
+
+---
+
+### Cliff Notes – Objectives Covered in Chapter 2
+
+**1.4 Identify common data analysis tools**
+- **Spreadsheets:** rows/columns; calculations, charts, reports (e.g., Excel)
+- **Programming languages / environments**
+  - **R** — statistics and analytics; often used with an IDE
+  - **Python** — general-purpose; very common in analytics
+  - **Anaconda** — distribution/manager for Python/R packages and environments (not a language)
+  - **Scala** — object-oriented + functional; often used in big-data stacks
+  - **SAS** — statistical package/language; good for automating repetitive analytics tasks
+- **SQL & database tools**
+  - **DDL:** `CREATE`, `ALTER`, `DROP` (structure)
+  - **DML:** `SELECT`, `INSERT`, `UPDATE`, `DELETE` (data)
+  - Tools: Azure Data Studio, MySQL Workbench, Compass, DBeaver, Toad, SSMS
+- **Business intelligence (BI)**
+  - Ingest/clean → analyze → visualize → model/predict → report
+  - **Power BI** (Desktop, service/SaaS, mobile, Report Builder, Report Server)
+  - **Tableau** — strong visualization and multi-source ingestion
+  - **Looker** — Google cloud/SaaS analytics
+
+**1.3 Identify infrastructure concepts**
+- **Cloud reasons:** on-demand self-service, scalability, elasticity
+  - **Horizontal scaling** — add more servers
+  - **Vertical scaling** — increase capacity of existing servers
+- **Service models**
+  - **SaaS** — full application delivered by provider
+  - **IaaS** — basic compute/storage/network resources
+  - **PaaS** — platform to build/run your own apps
+- **Storage types**
+  - **Object** — unstructured data
+  - **Block** — fixed-size blocks (often VMs/databases)
+  - **File** — hierarchical structure
+  - Local vs shared storage for VMs/containers
+- **Deployment models:** private/on-premises, public (multitenant), hybrid
+- **Major public clouds:** AWS, Microsoft Azure, Google Cloud Platform
 
 ---
 
