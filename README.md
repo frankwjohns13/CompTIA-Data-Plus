@@ -681,14 +681,14 @@ Domain 2.0 Data Acquisition and Preparation
   - **Unary Relationship:** Entity has a connection with itself
   - **Binary Relationship:** Connects to two entities
   - **Ternary Relationship:** Connects three entities
-  - **Associative Table:** Is used to resolve many-to-many relationships
-  - **Primary Key:** A unique numeric identifier
+  - **Associative Table:** Is junction/bridge for many-to-many relationships
+  - **Primary Key:** Unique identifier (can be numeric or other types)
   - **Synthetic Primary Key:** Attribute whose only purpose is to contain unique values for each row in a table
-  - **Foreign Key:** One of more columns in one table that point to corresponding columns in a related table
+  - **Foreign Key:** One or more columns in one table that point to corresponding columns in a related table
   - **Referential Integrity:** Enforces consistency in related tables
   - **Composite Primary Key:** A primary key with more than one column
   - **Database Administrator:** Highly trained person who understands how database software interacts with computer hardware
-- **Nonrelational Databases:** No predefined structure Highly flexible approach to storing data
+- **Nonrelational Databases:** No predefined structure. Highly flexible approach to storing data.
   - **Key-Value:** Is one of the simplest ways of storing data. It is a collection of keys and their corresponding values. Example: Song title => audio file of the song
   - **Document:** Similar to a Key-Value except the value is restricted to a specific structure format. Example: JSON
   - **Column Family:** Uses an index to identify data in groups
@@ -700,18 +700,18 @@ Domain 2.0 Data Acquisition and Preparation
 
 **Major Categories:**
 - **Online Transactional Processing (OLTP):** Handles everyday transaction. Example: Flight reservations, online orders...
-  - **Normalization:** The process for structuring a database to minimized duplication of data
-    - **First Normal Form (1NF):** Every row is unique, every column contains a unique value
+  - **Normalization:** The process for structuring a database to minimize duplication of data
+    - **First Normal Form (1NF):** Each column holds atomic (single) values; no repeating groups; rows uniquely identifiable
     - **Second Normal Form (2NF):** 1NF plus all non primary key values must depend on the entire primary key
     - **Third Normal Form (3NF):** Builds upon 2NF by adding a rule that all columns must depend on only the primary key.
-- **Online Analytical Processing (OLAP):** Focuses on an oganization's ability to analyze data.
+- **Online Analytical Processing (OLAP):** Focuses on an organization's ability to analyze data.
   - Denormalized design
   - More efficient for analytical queries to read large amounts of data in a single table.
 - **Schema Concepts:** The schema is the structure and depends on the purpose of the database.
-  - **Star Schema:** Facilitates analytical processing. Named after its appearance.
+  - **Star:** Facilitates analytical processing. Named after its appearance. Uses denormalized dimensions.
     - The *Fact Table* is in the center.
     - *Dimensional Tables* connect to the Fact Table.
-  - **Snowflake:** Similar to star it has a central fact table.
+  - **Snowflake:** Similar to star it has a central fact table. Uses normalized dimensions (subcategories)
     - Dimensions have subcategories.
     - Less denormalized than star.
   - **Dimensionality:** Refers to the number of attributes a table has. The greater the number of attributes, the higher the dimensionality.
@@ -725,31 +725,31 @@ Data can come from sources you own (internal) or it can be obtained from a third
 
 The data acquisition process: 
 - **Ingestion:** receiving, reshaping, and inserting data. Also known as Extracting, Transforming, and Loading (ETL).
-  - Extracting: Pulling data from the source system
-  - Transforming: Reformatting the data to fit your analytical design
-  - Loading: Ensuring the data is put into the analytical system.
-    - Initial Load: The first time data is put into the system.
-    - Delta/Incremental Load: Additional data added later.
-  - Data Source and Collection Methods: Data is the life blood of an organization.
-    - External Data: Offers benchmarks or evaluates areas for expansion
-    - Internal Data: Shows how a company can grow.
-  - Application Programming Interface (API): Structured method for computer systems to exchange information. API's hide how they do things and focus on what to show the user.
-  - Web Services: Smartphone applications may not have all the data they need saved on the phone. It connects via Hypertext Transfer Protocol (HTTP).
-  - Web Scraping: The programmatic retrieval of data from a website. Programming languages like Python and R make this easy.
-  - File: Common way to integrate and obtain data.
-  - File Types: CSV, XLS, and JSON.
-  - Logs: Log files are another common source of data.
+  - **Extracting:** Pulling data from the source system
+  - **Transforming:** Reformatting the data to fit your analytical design
+  - **Loading:** Ensuring the data is put into the analytical system.
+    - **Initial Load:** The first time data is put into the system.
+    - **Delta/Incremental Load:** Additional data added later.
+  - **Data Source and Collection Methods:** Data is the life blood of an organization.
+    - **External Data:** Offers benchmarks or evaluates areas for expansion
+    - **Internal Data:** Shows how a company can grow.
+  - **Application Programming Interface (API):** Structured method for computer systems to exchange information. API's hide how they do things and focus on what to show the user.
+  - **Web Services:** Smartphone applications may not have all the data they need saved on the phone. It connects via Hypertext Transfer Protocol (HTTP).
+  - **Web Scraping:** The programmatic retrieval of data from a website. Programming languages like Python and R make this easy.
+  - **File:** Common way to integrate and obtain data.
+  - **File Types:** CSV, XLS, and JSON.
+  - **Logs:** Log files are another common source of data.
     - Dates & Times, IP Addresses, Request Method, URL/Path, HTTP, Status Codes, Bytes Sent, User-Agent
-  - Data Repositories: Store data in preparation for Analysis.
-    - Data Silo: Repository controlled by one department or organization
-    - Data Warehouse: Database containing data from many transactional systems
-    - Data Marts: Subset of a warehouse that focuses on the needs of a particular department.
-    - Data Lake: Stores raw data in its native form.
-    - Data Lakehouse: Combines the warehouse structure with the lake style of data.
-  - Human-in-the-Loop: When the data you need is found only in the minds of people.
-    - Survey: You can tailer questions based on your goals and your audiance.
-    - Observation: You can watch people or machines and collect primary Quantitative or Qualitative data.
-    - Sampling: Collecting data from a smaller group and assuming it is relational to the entire group. 
+  - **Data Repositories:** Store data in preparation for Analysis.
+    - **Data Silo:** Repository controlled by one department or organization
+    - **Data Warehouse:** Database containing data from many transactional systems
+    - **Data Marts:** Subset of a warehouse that focuses on the needs of a particular department.
+    - **Data Lake:** Stores raw data in its native form.
+    - **Data Lakehouse:** Combines the warehouse structure with the lake style of data.
+  - **Human-in-the-Loop:** When the data you need is found only in the minds of people.
+    - **Survey:** You can tailor questions based on your goals and your audience.
+    - **Observation:** You can watch people or machines and collect primary Quantitative or Qualitative data.
+    - **Sampling:** Collecting data from a smaller group and assuming it is representative of the population. 
 
 
 ---
@@ -759,54 +759,80 @@ The data acquisition process:
 To turn a database into an operational database you use the Data Definition Language (DDL). DDL lets you CREATE, ALTER, and DROP tables. 
 Once the database is built, you use the Data Manipulation Language (DML) to INSERT, UPDATE, SELECT, and DELETE data in the table. 
 
+- **Filtering:** An entire table gives an overall picture. Filtering provides data on a subset of that table
+- **Sorting:** Organizes data in an order in which you find helpful
+- **Date Functions:** Often used to narrow a scope of data.
+- **Logical Functions:** Can make data substitutions when retrieving data.
+- **Aggregate Functions:** Summarizes data to help answer questions.
+- **Concatenation:** Merges separate variables into one.
+- **Nested Queries:** One query embedded within another query.
+- **Working with Multiple Tables:** It is common to pull data from multiple related tables.
+  - **Inner Join:** Use columns whose values exist in two tables (first tables foreign key to second tables primary key)
+  - **Outer Join:** eturns all rows from one table (LEFT/RIGHT) even without matches; full outer returns all from both
+  - **Cross Join:** Creates a cartesian product matching every row of table one with every row of table two.
+- **System Functions:** Expose data about the database itself.
+  - **Database Session:** Begins when you connect to the database and ends when you disconnect.
+- **Query Optimization:** Write efficient queries to do what you intend to do.
+- **Parametrization:** Minimize the number of times the database has to translate human readable requests into code the database understands.
+- **Full Table Scan:** Reading every row looking for a match
+- **Indexing:** Reduces the number of rows to search.
+- **Data Subsets and Temporary Tables:** Help when dealing with large volumes of data.
+  - **Temporary Tables:** Created to make data more manageable.
+  - **Data Subsets:** Use temporary tables for ad hoc analysis
+- **Execution Plan:** Shows the details of how a database runs a specific query. Helpful in troubleshooting
 
-
-
-
-
-
-
-
-
+---
 
 ### Exam Essentials
+- Contrast **OLTP** (day-to-day transactions, normalized) with **OLAP** (analysis, often denormalized).
+- Explain **normalization** goals and the idea of 1NF / 2NF / 3NF (reduce duplication, depend on the key).
+- Describe **star** vs **snowflake** schemas and the roles of fact vs dimension tables.
+- Identify **relational** vs **nonrelational** models (key-value, document, column-family, graph).
+- Know **primary key**, **foreign key**, **composite key**, **referential integrity**.
+- Trace **ETL**: extract → transform → load (initial vs delta/incremental).
+- Differentiate **internal** vs **external** sources and methods: APIs, web services, web scraping, files, logs, surveys/observation/sampling.
+- Distinguish repositories: **silo**, **warehouse**, **mart**, **lake**, **lakehouse**.
+- Use **DDL** (CREATE/ALTER/DROP) vs **DML** (SELECT/INSERT/UPDATE/DELETE).
+- Apply filtering, sorting, joins (inner/outer/cross), aggregates, and basic query optimization (indexes vs full table scans).
 
+---
 
+### Cliff Notes – Objectives Covered in Chapter 4
 
+**1.1 Explain data concepts**
+- **Relational DB:** entities, instances, ERDs, cardinality (unary/binary/ternary)
+- **Keys:** primary (unique row ID), synthetic PK, composite PK, foreign key, referential integrity
+- **Associative table:** resolves many-to-many relationships
+- **Nonrelational:** flexible, no fixed schema
+  - Key-value, document (e.g. JSON), column-family, graph
+- **OLTP:** transactional, normalized (1NF → 2NF → 3NF) to reduce duplication
+- **OLAP:** analytical, often denormalized for fast reads
+- **Schemas:** star (fact center + dimensions), snowflake (dimensions with subcategories)
+- **Dimensionality:** number of attributes; design options (effective dates, flags, etc.)
+- **DDL vs DML:** structure (CREATE/ALTER/DROP) vs data (SELECT/INSERT/UPDATE/DELETE)
+- **Query tools:** filter, sort, date/logical/aggregate functions, concatenation, nested queries
+- **Joins:** inner (matches only), outer (keep unmatched from one side), cross (Cartesian product)
+- **Optimization:** parameterization, indexes (avoid full table scans), temp tables/subsets, execution plans
 
+**1.2 Identify types of data sources**
+- **Internal** (owned systems) vs **external** (third-party / benchmarks / expansion)
+- **APIs** — structured system-to-system exchange
+- **Web services** — often over HTTP for apps that need remote data
+- **Web scraping** — programmatic site retrieval (e.g. Python, R)
+- **Files** — CSV, XLS, JSON, etc.
+- **Logs** — timestamps, IPs, methods, paths, status codes, bytes, user-agent
+- **Repositories**
+  - Data silo — department-controlled
+  - Data warehouse — integrated from many transactional systems
+  - Data mart — department-focused subset of a warehouse
+  - Data lake — raw data in native form
+  - Data lakehouse — lake flexibility + warehouse structure
+- **Human-in-the-loop:** surveys, observation, sampling
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+**2.1 Given a scenario, use data acquisition methods**
+- **Ingestion / ETL:** extract (from source) → transform (fit analytic design) → load (into analytic system)
+- **Initial load** vs **delta/incremental load**
+- Choose method by scenario: API, file drop, logs, scrape, survey/sample, warehouse/mart/lake feed
 
 
 </details> <!-- Ends Chapter 4 -->
@@ -1037,6 +1063,7 @@ Once the database is built, you use the Data Manipulation Language (DML) to INSE
 </details> <!-- Ends Chapters -->
 
 ---
+
 
 
 
