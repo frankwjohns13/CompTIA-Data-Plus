@@ -660,7 +660,119 @@ Used to format documents that are designed to be displayed in a web-browser.
 ## Chapter 4: Databases and Data Acquisition
 
 ### Domains
-  
+
+Domain 1.0 Data Concepts and Environments
+- 1.1 Explain data concepts
+- 1.2 Identify types of data sources
+
+Domain 2.0 Data Acquisition and Preparation
+- 2.1 Given a scenario, use data acquisition methods
+
+---
+
+### Exploring Databases
+
+**Two Categories:**
+- **Relational:** Structured database
+  - **Entity:** Contains data for a single subject
+  - **Entity Instance:** A specific example of an entity
+  - **Entity Relationship Diagram (ERD):** Visual artifact of the data modeling process
+  - **Cardinality:** Refers to a relationship between two entities
+  - **Unary Relationship:** Entity has a connection with itself
+  - **Binary Relationship:** Connects to two entities
+  - **Ternary Relationship:** Connects three entities
+  - **Associative Table:** Is used to resolve many-to-many relationships
+  - **Primary Key:** A unique numeric identifier
+  - **Synthetic Primary Key:** Attribute whose only purpose is to contain unique values for each row in a table
+  - **Foreign Key:** One of more columns in one table that point to corresponding columns in a related table
+  - **Referential Integrity:** Enforces consistency in related tables
+  - **Composite Primary Key:** A primary key with more than one column
+  - **Database Administrator:** Highly trained person who understands how database software interacts with computer hardware
+- **Nonrelational Databases:** No predefined structure Highly flexible approach to storing data
+  - **Key-Value:** Is one of the simplest ways of storing data. It is a collection of keys and their corresponding values. Example: Song title => audio file of the song
+  - **Document:** Similar to a Key-Value except the value is restricted to a specific structure format. Example: JSON
+  - **Column Family:** Uses an index to identify data in groups
+  - **Graph:** Specialized in exploring relationships between pieces of data.
+
+---
+
+### Database Use Cases
+
+**Major Categories:**
+- **Online Transactional Processing (OLTP):** Handles everyday transaction. Example: Flight reservations, online orders...
+  - **Normalization:** The process for structuring a database to minimized duplication of data
+    - **First Normal Form (1NF):** Every row is unique, every column contains a unique value
+    - **Second Normal Form (2NF):** 1NF plus all non primary key values must depend on the entire primary key
+    - **Third Normal Form (3NF):** Builds upon 2NF by adding a rule that all columns must depend on only the primary key.
+- **Online Analytical Processing (OLAP):** Focuses on an oganization's ability to analyze data.
+  - Denormalized design
+  - More efficient for analytical queries to read large amounts of data in a single table.
+- **Schema Concepts:** The schema is the structure and depends on the purpose of the database.
+  - **Star Schema:** Facilitates analytical processing. Named after its appearance.
+    - The *Fact Table* is in the center.
+    - *Dimensional Tables* connect to the Fact Table.
+  - **Snowflake:** Similar to star it has a central fact table.
+    - Dimensions have subcategories.
+    - Less denormalized than star.
+  - **Dimensionality:** Refers to the number of attributes a table has. The greater the number of attributes, the higher the dimensionality.
+  - **Handling Dimensionality:** There are many ways to design dimensions (start and end date, indicator flags, effective date...).
+
+---
+
+### Data Acquisition Concepts
+
+Data can come from sources you own (internal) or it can be obtained from a third-party source (external).
+
+The data acquisition process: 
+- **Ingestion:** receiving, reshaping, and inserting data. Also known as Extracting, Transforming, and Loading (ETL).
+  - Extracting: Pulling data from the source system
+  - Transforming: Reformatting the data to fit your analytical design
+  - Loading: Ensuring the data is put into the analytical system.
+    - Initial Load: The first time data is put into the system.
+    - Delta/Incremental Load: Additional data added later.
+  - Data Source and Collection Methods: Data is the life blood of an organization.
+    - External Data: Offers benchmarks or evaluates areas for expansion
+    - Internal Data: Shows how a company can grow.
+  - Application Programming Interface (API): Structured method for computer systems to exchange information. API's hide how they do things and focus on what to show the user.
+  - Web Services: Smartphone applications may not have all the data they need saved on the phone. It connects via Hypertext Transfer Protocol (HTTP).
+  - Web Scraping: The programmatic retrieval of data from a website. Programming languages like Python and R make this easy.
+  - File: Common way to integrate and obtain data.
+  - File Types: CSV, XLS, and JSON.
+  - Logs: Log files are another common source of data.
+    - Dates & Times, IP Addresses, Request Method, URL/Path, HTTP, Status Codes, Bytes Sent, User-Agent
+  - Data Repositories: Store data in preparation for Analysis.
+    - Data Silo: Repository controlled by one department or organization
+    - Data Warehouse: Database containing data from many transactional systems
+    - Data Marts: Subset of a warehouse that focuses on the needs of a particular department.
+    - Data Lake: Stores raw data in its native form.
+    - Data Lakehouse: Combines the warehouse structure with the lake style of data.
+  - Human-in-the-Loop: When the data you need is found only in the minds of people.
+    - Survey: You can tailer questions based on your goals and your audiance.
+    - Observation: You can watch people or machines and collect primary Quantitative or Qualitative data.
+    - Sampling: Collecting data from a smaller group and assuming it is relational to the entire group. 
+
+
+---
+
+### Working with Data
+
+To turn a database into an operational database you use the Data Definition Language (DDL). DDL lets you CREATE, ALTER, and DROP tables. 
+Once the database is built, you use the Data Manipulation Language (DML) to INSERT, UPDATE, SELECT, and DELETE data in the table. 
+
+
+
+
+
+
+
+
+
+
+
+### Exam Essentials
+
+
+
 
 
 
