@@ -846,41 +846,151 @@ Once the database is built, you use the Data Manipulation Language (DML) to INSE
 ## Chapter 5: Data Quality
 
 ### Domains
-  
 
+2.0: Data Acquisition and Preparation
+- 2.2 Given a scenario, perform data exploration to identify possible inconsistencies with a dataset
+- 2.3 Given a scenario, perform appropriate data transformation and cleansing techniques
 
+---
 
+### Data Inconsistencies
 
+Each data source has unique quality issues and associated inconsistencies. When designing an extract, transform and load (ETL) 
+process, you need to deal with these issues.
 
+**Data Duplication:** occurs when the same data is entered twice, often as a result of human error.
 
+**Data Redundancy:** Happens when the same data elements exist in multiple places within a system.
 
+**Invalid Data:** Values outside of a valid range for a given attribute.
 
+**Nonparametric Data:** Categorical data. Categories may only distinguish groups, or they may have a meaningful rank order (order matters, not the raw label values).
 
+**Data Outliers:** Values that differ significantly from other observations in the dataset.
 
+**Specification Mismatch:** Occurs when an individual component's characteristics are beyond the range of acceptable values.
 
+**Data Type Validation:** Ensures that values in a dataset have a consistent data type.
 
+**Data Completeness:** The minimum amount of information needed to fulfill a business objective. 
 
+---
 
+### Data Transformation Techniques
 
+**String Manipulation:** Programmatically modifying text to improve data consistency.
+- **Regular Expressions (RegEx):** Match text patterns
+  - *Anchors:* The position in the string
+  - *Boolean:* Allows for matching more than one value (example: neighbor | neighbour matches both neighbor and neighbour
+  - *Character Classes:* Ability to match multiple values for a given character
+  - *Literals:* Match exactly the characters in a text string
+  - *Quantifiers:* Specify the number of time to match a pattern
+  - *Wildcards:* Matches any character
+- **Conversion:** Change data from one unit of measurement to another.
+- **Augmentation:** Adding attributes not found within your original dataset.
+- **Scaling:** Changing the range of a numeric variable to ensure consistent measurement and improved ability to compare across variables.
+- **Grouping Techniques:** Two common approaches
+  - *Clustering:* Forms groups of similar data points using shared attributes.
+  - *Binning:* Grouping continuous numerical data into categories (bins). Example: U.S. Census Bureau's Age Categories
+- **Reduction:** Shrinking an extensive dataset without negatively impacting its analytical value.
+- **Dimensionality Reductions:** Remove attributes from a dataset.
+- **Numerosity Reductions:** Reduces the overall volume of data.
+- **Aggregation:** Summarization of raw data for analysis.
+- **Transposition:** When you want to change rows into columns.
+- **Exploding:** Take complex data from a single row and transform it into multiple rows.
+- **Standardization:** Converting data into a consistent format to ensure uniformity and comparability.
+- **Imputation:** Technique for dealing with missing values by replacing them with substitutes.
+  - Remove missing data
+  - Replace it with zeros
+  - Replace it with overall average
+  - Replace it with the most frequent occurence (mode)
+  - Replace it with the closest (or neighboring) value average
+- **Parsing:** Separating composite data into their component parts
+- **Merging:** Combine multiple datasets with different structures into one dataset.
+- **Appending:** Combines multiple datasets with the same structure.
+- **Recording Data:** Maps old values to new values to facilitate analysis.
+- **Derived Variables:** New variables resulting from calculations on existing variables.
+- **Deletion:** Removing data from a dataset.
+- **Data Blending:** Combines multiple sources of data into a single dataset at the reporting level.
 
+---
 
+### Managing Data Quality
 
+As an analyst you need to recognize situations that cause data quality issues.
 
+**Circumstances to check:** Every step along the lifecycle creates opportunities for data quality issues
+- **Data Acquisition:** Source system inconsistencies can result in missing or invalid values.
+- **Data Manipulation:** Errors can occur when data is reshaped to fit your structure.
+- **Final Product Preparation:** Errors when packaging data into reports and dashboards. 
 
+**Automated Validation:** can be used to prevent mistakes and perform data validation checks.
 
+**Data Quality Dimensions:** There are six dimensions to consider:
+- **Accuracy:** How close an attribute matches its intended use.
+- **Completeness:** All data is present.
+- **Consistency:** Reliability of an attribute.
+- **Timeliness:** Is it available when needed.
+- **Uniqueness:** Whether or not an attribute exists in multiple places.
+- **Validity:** Attributes value is within range.
 
+**Data Quality Rules and Metrics:** Conformity or nonconformity of data
 
+**Methods to validate quality:** Can be done by seeing if the data passes your reasonable expectations or by various statistical methods that look 
+for irregularities.
+- **Reasonable Expectations:** Is the data being processed at the rate expected? Does the output match your expected results?
+- **Data Profiling:** Statistical approach that looks for discrepancies including missing values that occur infrequently, too frequently, or should be eliminated.
+- **Data Audits:** Help you understand whether or not you have the data your business needs to operate.
+- **Cross-validation:** A statistical technique that evaluates how well predictive models perform. 
 
+---
 
+### Exam Essentials
+- Spot common inconsistencies: duplication, redundancy, invalid values, outliers, type mismatches, incompleteness.
+- Explain why **missing data** and **outliers** matter and how they affect analysis.
+- Apply transformation/cleansing: string work (including RegEx ideas), conversion, scaling, binning/clustering, aggregation, transposition, explode, standardize, impute, parse, merge/append, recode, derive, delete.
+- Contrast **dimensionality reduction** (fewer attributes) vs **numerosity reduction** (less volume/rows).
+- Contrast **merging** vs **appending** vs **data blending**.
+- Name the six quality dimensions: accuracy, completeness, consistency, timeliness, uniqueness, validity.
+- Describe ways to check quality: reasonable expectations, profiling, audits, cross-validation; use rules/metrics and automated validation where possible.
 
+---
 
+### Cliff Notes – Objectives Covered in Chapter 5
 
+**2.2 Given a scenario, perform data exploration to identify possible inconsistencies**
+- **Duplication** — same data entered more than once  
+- **Redundancy** — same elements stored in multiple places  
+- **Invalid data** — outside allowed range  
+- **Outliers** — values far from other observations  
+- **Specification mismatch** — component outside acceptable limits  
+- **Data type validation** — values match the expected type  
+- **Completeness** — enough information for the business need  
+- **Quality dimensions:** accuracy, completeness, consistency, timeliness, uniqueness, validity  
+- **Where issues arise:** acquisition, manipulation, final report/dashboard prep  
+- **Checks:** reasonable expectations, data profiling, audits, cross-validation; rules/metrics; automated validation  
 
+**2.3 Given a scenario, perform appropriate data transformation and cleansing**
+- **String manipulation / RegEx** — anchors, alternation (Boolean), character classes, literals, quantifiers, wildcards  
+- **Conversion** — change units  
+- **Augmentation** — add attributes not in the source  
+- **Scaling** — change numeric range for comparability  
+- **Grouping** — clustering (similar points); binning (continuous → categories)  
+- **Reduction** — dimensionality (drop attributes); numerosity (reduce volume)  
+- **Aggregation** — summarize raw data  
+- **Transposition** — rows ↔ columns  
+- **Exploding** — one complex row → multiple rows  
+- **Standardization** — consistent format  
+- **Imputation** — handle missing values (drop; zero; mean; mode; neighbor/closest average)  
+- **Parsing** — split composite fields  
+- **Merging** — combine different structures; **appending** — same structure; **blending** — combine at reporting layer  
+- **Recoding** — map old values → new values  
+- **Derived variables** — calculated from existing fields  
+- **Deletion** — remove data
 
+---
 
-
-
-
+**End of Chapter 5**
 
 </details> <!-- Ends Chapter 5 -->
 
