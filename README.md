@@ -994,7 +994,6 @@ for irregularities.
 
 </details> <!-- Ends Chapter 5 -->
 
-
 ---
 
 <details>
@@ -1002,43 +1001,195 @@ for irregularities.
 
 ## Chapter 6: Data Analysis and Statistics
 
-### Domains
+### Domains 
 
+3.0: Data Analysis
+- 3.1 Given a set of requirements, determine the appropriate communication approach for data analysis.
+- 3.2 Given a scenario, select the appropriate statistical method or function.
+- 3.3 Given a scenario, troubleshoot basic issues using the appropriate tool or method. 
 
+---
 
+#### Communication Approaches
 
+Effective communication combines art and science.
 
+**Audience:** The group of people your data is for. 
 
+**User persona types:** The typical audience member
+- **Individual contributors:** Need sufficient data to perform their role.
+- **Nontechnical Managers:**Need operational data to make tactical decisions.
+- **Technical Managers:** Need operational data, source data, and analytical method.
+- **Product Leadership:** Data about products they own, market size, customer desires, production details, and distribution information.
+- **C-Suite:** (CEO, CFO, CTO, COO...) Insights that enable strategic decision-making. Less likely to understand methods.
 
+**Constituents:** consider if you have internal or external constituents. This impacts the sensitivity of data.
+- **Information Sensitivity:** Not all data is approved for all people.
 
+**Key Performance Indicators (KPIs):** are metrics that leaders agree are crucial to understanding how an organization is performing.
 
+- **Chief Finance Officer (CFO)**
+  - Gross Profit Margin
+  - Cost of Goods Sold
+  - Net Profit Margin
+  - Working Capital
+  - Operating Cash Flow
+  - Debt-to-Equity Ratio
+  - Burn Rate
+  - Accounts Receivable
+  - Accounts Payable
+- **Chief Marketing Officer**
+  - Brand Awareness
+  - Churn
+  - Customer Satisfaction Customer Lifetime Value
+  - Cost per Click
+  - Net Promotor Score (NPS)
+  - Return on Market Investment
+- **Human Resource (HR)**
+  - Employee Satisfaction
+  - Turnover
+  - Cost per Hire
+  - Time to Hire
 
+**Mock-up:** A simplified visual prototype to show the audience. 
 
+**Accessibility:** Presents the data in a way they can understand regardless of any physical disabilities (colors, contrast, fonts).
 
+#### Fundamentals of Statistics
 
+Knowledge of statistics is the foundation for modern data analysts.
+- **Population:** All the data points you want to study.
+- **Sample:** A subset of a population.
+- **Variable:** A unique attribute about a data subject.
+- **Observation:** Individual record in a dataset corresponding to a tabular row.
+  - **Sample Size:** Number of observations from the population.
+  - **Statistic:** Numeric representation of a property of a sample.
+  - **Parameter:** Numeric representation of a property for the population.
 
+**Statistical Functions and Measures**
+- **Mathematical:** Measure the frequency, central tendency, dispersion, and position of data.
+  - **Count:** Straight forward way to understand how much data
+  - **Percentage:** Identifies the proportion of a given value (occurrence / total) * 100.
+  - **Frequency:** How often a specific value for a variable occurs.
+- **Measures of Central Tendency:** Identify the central or most typical, value in a dataset.
+  - **Mean:** Average, sum / total
+  - **Median:** Midpoint value for all observations of a variable.
+    1) Sort the data numerically
+    2) Find the middle value
+       a) Odd count is the middle value (1,3,4,6,9) 4 would be the median.
+       b) Even count, take the mean of the middle two values. (1,3,4,5,6,9) middle values are 4 & 5 median would be 4.5
+  - **Mode:** A variable's most frequently occurring value.
 
+**Measures of Dispersion:** Creates context around data spread
+- **Range:** The difference between the Maximum and Minimum values.
+- **Distribution:** A function that illustrates probable values for a variable and the frequency with which they occur.
+  - **Normal Distribution:** Symmetrically dispersed around the mean.
+  - **Central Limit Theorem (CLT):** As a sample size increases it becomes increasingly likely that the sampling distribution of all those means will be normally distributed.
+  - **Skewed:** Occurs when the mean and median are far apart.
+  - **Skewed Distribution:** Asymmetrical shape with one peak and a long tail on one side.
+    - A right skew is positive
+    - A left skew is negative
+  - **Bimodal Distribution:** Has two distinct modes.
+  - **Variance:** How far from the mean value each other data point is. How spread out the dataset is.
+  - **Standard Deviation:** Statistic that measures dispersion in terms of how far the values of a variable are from its mean. It is the average distance of values from the mean (spread around the mean).
+  - **Quartile:** Dividing a sorted dataset into four groups.
+  - **Interquartile Range (IQR):** Combines the second and third quartile and consists of the middle 50% of the sorted dataset.
+- **Logical:** Logical functions evaluate if a condition is true or false.
+  | **Operator** | **Description** |
+  |--------------|-----------------|
+  | `IS NULL`    | Tests if the entry is blank |
+  | `IS NOT NULL` | Checks if the variable has an entry |
+  | `OR`          | Checks whether either of the conditions are true |
+- **Date:** Date functions help you work with and manipulate dates.
+- **String:** String functions are used to improve data quality by cleaning and transforming text data.
+  | **Function** | **Description**                                           |
+  |--------------|-----------------------------------------------------------|
+  | `UPPER()`    | Converts the string to all uppercase                      |
+  | `LOWER()`    | Converts the string to all lowercase                      |
+  | `INITCAP()`  | Converts only the first letter of the string to uppercase |
+  | `TRIM()`     | Removes leading or trailing white space                   |
 
+**Standard deviation on the exam:**  
+Know what it is and how to interpret it (larger SD = more spread). You are not expected to grind the full formula by hand. 
+Same for variance. You should be able to find mean, median, mode, range, and read a simple normal vs skewed picture.
 
+---
 
+#### Troubleshooting
 
+**Validate Data Sources**
 
+Validating data sources is essential to troubleshooting: 
+- **Header Record:** Check column names.
+- **Footer Record:** Check to see if there are the correct number of entries.
+- **Checksum:** Check the size of the file.
+- **Network Rules:** Ensure no firewall rules interfere with migrating data. 
 
+---
 
+#### Analysis Techniques
 
+**Determine Type of Analysis:** Type is driven by the business objectives and desired outcomes.
 
+**Types of Analysis:**
+- **Trend Analysis:** Identify patterns by comparing data over time.
+- **Performance Analysis:** Measures performance against defined goals.
+- **Link Analysis:** Measures the relationships between two data points to discover patterns.
 
+**Exploratory Data Analysis**  
+An exploratory data analysis (EDA) uses descriptive statistics to summarize the main characteristics of a dataset, identify outliers, and give you context.
+- Steps:
+  - Check the data structure
+  - Check the data representation
+  - Check for missing data
+  - Identify outliers
+  - Summarize statistics
+  - Check assumptions
 
+---
 
+#### Exam Essentials
 
+- Match communication to **audience** (individual contributors, nontechnical managers, technical managers, product leadership, C-suite) and sensitivity (internal vs external).
+- Use **KPIs** appropriate to the role (finance, marketing, HR examples).
+- Distinguish **population / parameter** vs **sample / statistic**; know observation, variable, sample size.
+- Calculate/interpret **central tendency**: mean, median (odd/even rules), mode.
+- Describe **dispersion**: range, variance, standard deviation, quartiles, IQR; normal vs skewed (right/positive, left/negative) vs bimodal; idea of CLT.
+- Choose analysis type: **trend**, **performance**, **link**; use **EDA** steps (structure, representation, missing data, outliers, summary stats, assumptions).
+- Use logical vs string (and date) functions for validation/cleaning.
+- Troubleshoot sources with header/footer checks, checksums, and network/path issues.
 
+---
 
+#### Cliff Notes
 
+**3.1 Given a set of requirements, determine the appropriate communication approach**
+- Know the **audience** and **persona** (individual contributor → C-suite).
+- **C-suite** wants strategic insight, not method detail; technical managers want methods + sources.
+- **Internal vs external** constituents → data sensitivity.
+- **KPIs** = agreed metrics of performance (examples by CFO / CMO / HR).
+- Support understanding with **mock-ups** and **accessibility** (color, contrast, fonts).
 
+**3.2 Given a scenario, select the appropriate statistical method or function**
+- **Population** vs **sample**; **parameter** (population) vs **statistic** (sample).
+- **Central tendency:** mean (average), median (middle after sort), mode (most frequent).
+- **Dispersion:** range (max − min), variance, standard deviation (spread from mean), quartiles, IQR (middle 50%).
+- **Distribution:** normal (symmetric about mean), skewed (mean ≠ median; right = positive, left = negative), bimodal (two peaks).
+- **CLT:** larger samples → sampling distribution of the mean tends toward normal.
+- **Count, percentage, frequency** for basic magnitude/proportion.
+- **Logical** (IS NULL, IS NOT NULL, OR…), **date**, **string** (UPPER, LOWER, INITCAP, TRIM) functions.
+- Analysis types: **trend** (over time), **performance** (vs goals), **link** (relationships).
+- **EDA:** structure → representation → missing data → outliers → summary stats → assumptions.
 
+**3.3 Given a scenario, troubleshoot basic issues using the appropriate tool or method**
+- Validate **data sources**: header (column names), footer (row counts), checksum (file integrity/size), network rules (delivery blocked?).
+- Use logical/string/date checks to find blanks, bad formats, and inconsistent text.
+- EDA steps double as troubleshooting when results look wrong.
 
+---
 
-
+**End of Chapter 6**
+ 
 </details> <!-- Ends Chapter 6 -->
 
 
