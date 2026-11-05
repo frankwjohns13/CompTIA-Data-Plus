@@ -1201,14 +1201,140 @@ An exploratory data analysis (EDA) uses descriptive statistics to summarize the 
 ## Chapter 7: Data Visualization with Reports and Dashboards
 
 ### Domains
-  
 
+Domain 3.0: Data Analysis
+- 3.1 Given a set of requirements, determine the appropriate communication approach for data analysis
+- 3.2 Given a scenario, select the appropriate statistical method or function
+- 3.3 Given a scenario, troubleshoot basic issues using the appropriate tool or method
 
+---
 
+#### Exploring Visualization Elements
 
+**Charts:** Fundamental method to visualize both quantitative and qualitative data.
+- **Line** - Relationships of variables along an x and y axis.
+- **Pie** - A circle that represents 100% and each variable is a slice.
+- **Bar** - Categorical data where rectangular bars represent each portion.
+- **Stack** - A single bar segmented by each category.
+- **Scatter** - Uses dots for each observation in a dataset.
+- **Bubble** - Scatter plot where the size of each dot is based on a third numeric variable.
 
+**Histogram:** A frequency distribution for numeric data.
 
+**Maps** 
+- **Geographic Maps* -* Excellent for location-related data.
+- **Heat Maps** - Uses color and location to visually illustrate significance.
+- **Tree Maps** - Uses rectangles whose area depicts a proportional representation of hierarchical data.
 
+**Pivot Tables:** Use aggregation functions (SUM, COUNT, AVERAGE, MAX, and MIN) to reshape and summarize data.
+
+**Infographics:** Information graphics minimize text in favor of visual elements to display data in an easy to understand way.
+
+**Waterfall:** A chart that displays the cumulative effect of numeric values over time.
+
+**Word Cloud:** A visualization that uses shapes, font size, and color to signify the relative importance of words. 
+
+---
+
+#### Understanding Business Requirements
+
+**Key Terms**
+- **Report:** Electronic or physical document that reflects information at a given time.
+- **Dashboard:** An interactive visualization that encourages people to explore data dynamically. 
+
+To create proper and effective reports and dashboards you must know who your audience is.
+
+Electronic reports can be handled in one of three ways.
+- **Pull Approach** - You publish a report on a regular basis to a location where the audience can access it. They can retrieve it as needed. 
+- **Push Approach** - Report is generated and automatically sent to an audience list.
+- **Blended Approach** - You store the report in a central location and notify the list of people it is ready.
+
+---
+
+#### Understanding Design Elements
+
+When creating reports or dashboards use the five Cs of design priinciples
+- **Control** - Focus the attention of your audience. Make it quick and easy to find the data they need.
+- **Correctness** - Make sure that your information is accurate and free of spelling errors.
+- **Clarity** - Select the right visualization tool for communicating your message.
+- **Consistency** - Use the same design and elements throughout your report and dashboard.
+- **Concentration** - Using visuals to focus your audience's attention on the most relevant information without overwhelming them with details.
+
+**Cover Page**  
+This is the first thing people see. Therefore, it should have a concise title describing the report's contents.
+
+**Executive Summary**  
+Following the cover page is the executive summary which provides an overview of the reports contents.
+
+**Branding**  
+Always adhere to the corporate branding standards
+
+**Color Schemas**  
+Limited selection of colors used when creating a report or dashboard. 
+- **Monochromatic** palette limits you to working with shades of a single color.
+- **Complementary** palette starts with two contrasting colors. 
+
+**Layouts**  
+When designing reports and dashboards it is crucial to think about approachability. Begin with a summary before diving into details. 
+For long multipage reports, use a Table of Contents, short paragraphs, and bullet points.
+- **Parallel Construction** - Use the same style bullet point through!!
+
+**Fonts**  
+Avoid ornate fonts. Instead, use easy to read fonts like: 
+- serif (Times New Roman, Garamond, Courier New) for printed reports
+- sans serif (Arial, Helvetica, Geneva) for digital reports
+
+**Graphics**  
+In reports and dashboards, displaying summary information graphically is a practical choice. "A picture is worth a thousand words." Clearly labeled graphics and charts can deliver a lot of information quickly. 
+
+**Corporate Reporting Standards**  
+Comply with your organizations style guide (logos, color schemas...)
+
+**Documentation Elements**  
+To help build trust incorporate versions numbers, reference data sources, and reference data. 
+- **Version numbers** - Numeric value that refers to a specific report.
+- **Reference Data sources** - List where and when the information is from adds validity and a time frame.
+
+**Frequently Asked Questions (FAQ)**  
+Having a section that answers commonly asked questions is a good practice. 
+
+---
+
+#### Understanding Dashboard Development Methods
+
+Dashboards are dynamic tools that assist people explore data to inform their decision-making.
+
+**Consumer Types**  
+It is crucial to identify who will be interacting with the dashboard. As you identify what your consumers want to see, you can locate where to get the relevant data. 
+- **Service Level Agreement (SLA)** - may be desired when designing a dashboard for external customers.
+
+**Data Source Considerations** - Next you need to decide whether or not you need live data.
+  - **Static Data** - Data that refreshes at some regular intervals.
+  - **Continuous Data (Live Data)** - Comes from operational databases that people use to perform their daily duties.
+
+**Data Type Considerations**  
+Regardless of whether you generate reports or use a dashboard, make sure your software can handle the data type of each attribute.
+
+**Development Process**  
+Use wireframes and mockups to help build and refine the dashboard's design.
+- **Wireframe** - is a blueprint for an application that defines basic design and functions.
+- **Mockups** - Extend a wireframe with details about the visual elements. 
+
+**Operational Considerations**  
+Obtain feedback while designing the dashboard. Clarify access permissions. 
+- **Access Permissions** - define who can view the data.
+
+---
+
+#### Delivery Considerations
+
+As always, remember to identify your audience.
+- Static and Dynamic Delivery - Determining if your dashboard or report needs to be static or dynamic is imperative! It determines where and how you get your data.
+  - **Static** - reports and dashboards pull data from resources that reflect a specific point in time.
+  - **Dynamic** - reports and dashboards provide real-time access to information
+  - **Self-service Portals** - provide on-demand access to aggregated data. 
+
+- **Frequency:** One more thing to consider when designing reports and dashboards is how and how often the data will be refreshed. 
 
 
 
