@@ -1476,6 +1476,7 @@ Combining techniques and operational experience will help mitigate, troubleshoot
 - **Subject Area Data Steward:** Works in the owner's organization and handles the day-to-day governance activities.
 - **Data Custodian:** Someone who implements technical controls that execute governance policies. 
 
+---
 
 ### Data Compliance Concepts
 
@@ -1514,37 +1515,6 @@ Combining techniques and operational experience will help mitigate, troubleshoot
 
 
 </details> <!-- Ends Chapter 8 -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
