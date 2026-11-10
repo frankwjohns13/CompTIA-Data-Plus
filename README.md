@@ -1010,7 +1010,7 @@ for irregularities.
 
 ---
 
-#### Communication Approaches
+### Communication Approaches
 
 Effective communication combines art and science.
 
@@ -1055,7 +1055,7 @@ Effective communication combines art and science.
 
 **Accessibility:** Presents the data in a way they can understand regardless of any physical disabilities (colors, contrast, fonts).
 
-#### Fundamentals of Statistics
+### Fundamentals of Statistics
 
 Knowledge of statistics is the foundation for modern data analysts.
 - **Population:** All the data points you want to study.
@@ -1115,7 +1115,7 @@ Same for variance. You should be able to find mean, median, mode, range, and rea
 
 ---
 
-#### Troubleshooting
+### Troubleshooting
 
 **Validate Data Sources**
 
@@ -1127,7 +1127,7 @@ Validating data sources is essential to troubleshooting:
 
 ---
 
-#### Analysis Techniques
+### Analysis Techniques
 
 **Determine Type of Analysis:** Type is driven by the business objectives and desired outcomes.
 
@@ -1148,7 +1148,7 @@ An exploratory data analysis (EDA) uses descriptive statistics to summarize the 
 
 ---
 
-#### Exam Essentials
+### Exam Essentials
 
 - Match communication to **audience** (individual contributors, nontechnical managers, technical managers, product leadership, C-suite) and sensitivity (internal vs external).
 - Use **KPIs** appropriate to the role (finance, marketing, HR examples).
@@ -1161,7 +1161,7 @@ An exploratory data analysis (EDA) uses descriptive statistics to summarize the 
 
 ---
 
-#### Cliff Notes
+### Cliff Notes
 
 **3.1 Given a set of requirements, determine the appropriate communication approach**
 - Know the **audience** and **persona** (individual contributor → C-suite).
@@ -1209,7 +1209,7 @@ Domain 3.0: Data Analysis
 
 ---
 
-#### Exploring Visualization Elements
+### Exploring Visualization Elements
 
 **Charts:** Fundamental method to visualize both quantitative and qualitative data.
 - **Line:** Trends over time.
@@ -1234,7 +1234,7 @@ Domain 3.0: Data Analysis
 
 ---
 
-#### Understanding Business Requirements
+### Understanding Business Requirements
 
 **Key Terms**
 - **Report:** Electronic or physical document that reflects information at a given time.
@@ -1249,7 +1249,7 @@ Electronic reports can be handled in one of three ways.
 
 ---
 
-#### Understanding Design Elements
+### Understanding Design Elements
 
 When creating reports or dashboards use the five Cs of design principles
 - **Control:** Focus the attention of your audience. Make it quick and easy to find the data they need.
@@ -1288,7 +1288,7 @@ For long multipage reports, use a Table of Contents, short paragraphs, and bulle
 
 ---
 
-#### Understanding Dashboard Development Methods
+### Understanding Dashboard Development Methods
 
 Dashboards are dynamic tools that assist people explore data to inform their decision-making.
 
@@ -1310,7 +1310,7 @@ Dashboards are dynamic tools that assist people explore data to inform their dec
 
 ---
 
-#### Delivery Considerations
+### Delivery Considerations
 
 As always, remember to identify your audience.
 
@@ -1340,7 +1340,7 @@ Static and Dynamic Delivery: Determining if your dashboard or report needs to be
 
 ---
 
-#### Report Validation Techniques
+### Report Validation Techniques
 
 Organizations rely on reliable, accurate reports when making decisions. 
 
@@ -1364,7 +1364,7 @@ Combining techniques and operational experience will help mitigate, troubleshoot
 
 ---
 
-#### Exam Essentials
+### Exam Essentials
 
 ### Exam Essentials
 - Start visualization work by identifying **audience**, goals, and sensitivity (same idea as Ch. 6 communication).
@@ -1433,7 +1433,51 @@ Combining techniques and operational experience will help mitigate, troubleshoot
 ## Chapter 8: Data Governance
 
 ### Domains
-  
+
+  5.0: Data Governance
+  - 5.1 Explain data management concepts
+  - 5.2 Summarize concepts related to data compliance
+  - 5.3 Compare and contrast data privacy and protection practices
+  - 5.4 Compare and contrast data quality assurance practices
+
+---
+
+### Data Management Concepts
+
+**Data Management:** Collection of architectures, policies, practices, and procedures defining how an organization manages data over its lifetime.
+
+**Data Governance:** Set of policies, procedure, and controls an organization develops to safeguard data. 
+
+**Integration:** The practice of consolidating data from disparate sources to improve organizational decision making. 
+- **Real-time Integration:** Provides the most current data available.
+- **Batch Integration:** A snapshot of data at a specific time.
+
+**Documentation:** Proper use of accurate documentation builds stability and confidence.
+
+**Data Flow Diagram (DFD):** A visual drawing of how data moves through the system.
+
+**Data Lineage:** Describes the complete lifecycle of data from creating to final destination.
+
+**Data Dictionary:** A document detailing the specifics of objects within a relational database, including tables, indexes, and views.
+
+**Hierarchy Structure:** Organizes data in a tree-like arrangement, representing parent-child relationships.
+
+**Source of Truth:** The authoritative system of records for data within an organization. 
+
+**Data Versioning:** Systematically tracks and manages dataset changes over time by uniquely identifying each version.
+
+**Metadata:** Data that describes data. Provides business context you do not receive when examining the data itself.
+
+**Data Governance Roles:**
+- **Data Stewardship:** The act of developing policies and procedures for looking at an organization's data quality
+- **Organizational Data Steward:** The person responsible for data stewardship.
+- **Data Owner:** The senior business leader with overall responsibility for a specific data domain.
+- **Data Domain:** Data about a particular operational division of the orgainzation.
+- **Subject Area Data Steward:** Works in the owner's organization and handles the day-to-day governance activities.
+- **Data Custodian:** Someone who implements technical controls that execute governance policies. 
+
+
+### Data Compliance Concepts
 
 
 
