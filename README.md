@@ -1480,14 +1480,88 @@ Combining techniques and operational experience will help mitigate, troubleshoot
 
 ### Data Compliance Concepts
 
+Data compliance ensures that organizations handle, process, and store data while adhering to legal, regulatory, and industry standards.
 
+**National Institute of Standards and Technology (NIST): A nonregulatory agency of the U.S. Department of Commerce that promotes innovation. They provide standards and guidelines on subject areas like cybersecurity, cryptography, and risk management. 
 
+**Retention:** Policy-driven process that defines how long to hold data.
 
+**Jurisdictional Requirements:** There are four regulatory and compicance obligations to consider. 
+- **Criminal Law:** Used to discourage people from acting in a way that negatively impacts society.
+- **Civil Law:** Used to resolve disputes between individuals, organizations, and goverments.
+- **Administrative Law:** Allows government administrative agencies to create regulations.
+- **Private Industry Regulations:** Aims to govern the activities of individuals and orgainzations without the force of law.
 
+**Replication:** Copies date from one environment to another.
 
+**Storage:** A durable location that holds data at rest.
+- **Block Storage:** Directly accessible by the operating system.
+- **Object Storage:** Stores data as individual objects.
 
+**Data Ethics:** Moral principles guiding responsible collection, use, and sharing of data. 
 
+**Payment Card Industry (PCI):** Nongovernmental body that governs car-based financial payments.
 
+**PCI Data Security Standard (PCI DSS):** Core information security standard.
+- Six principles:
+  - Building and maintaining a secure netowrk.
+  - Protecting cardholder data.
+  - Maintaining a vulnerability management program.
+  - Implementing strong access controls
+  - Regularly monitoring and testing networks
+  - Maintaining an information security policy.
+- Two Primary Categories:
+  - **Cardholder Data (CHD):** Data from the front of the card. (Name, primary account number, and expiration date)
+  - **Sensitive Authorization Data (SAD):** Information from the back of the card. (Track data, Personal Identification Number (PIN), and Card Verification Value (CVV)).
+
+**Personally Identifiable Information (PII):** Data that uniquely identifies an individual. NIST defines PII as:
+- Full Name
+- Date and Place of Birth
+- Driver's License Number
+- Passport Number
+- Credit Card Numbers
+- Addresses
+- Telephone Numbers
+- Email Addresses
+- Login Credentials and Passwords
+
+**Protected Health Information (PHI):** A broad category of data elements identifying an individual's health information. 
+In the U.S., the **Health Insurance Portability and Accountability Act (HIPAA)** is the comprehensive law that regulates PHI.  
+The 18 elements of PHI:
+- Names
+- Geographic Identifiers smaller than a state
+- Dates other than years relating to an individual
+- Telephone numbers
+- Fax numbers
+- Email address
+- Social Security Number (SSN)
+- Medica record numbers
+- Health plan beneficiary numbers
+- Account numbers
+- Certificate or license numbers
+- Vehicle identifiers
+- Device identifiers and serial numbers
+- Web Uniform Resource Locators (URL)
+- Internet Protocol (IP) addresses
+- Biometric identifiers
+- Full-face photographs
+- Any other unique identifying numbers, characteristics, or codes
+
+**Audit:** Examines an organization's data management practices, security controls, and regulatory compliance.
+
+**Classification:** Assigns a risk-based category to data based on its level of sensitivity, value, and relevant regulatory requirements.
+
+**Incident Reporting:** Documents how to respond to security events that compromise data integrity, confidentiality, or availability. It generally includes the following steps:
+1. Verify the breach
+2. Stop the breach
+3. Assess the impact of the breach
+4. Notify the impacted parties
+5. Correct the cause of the breach
+6. Conduct a comprehensive review.
+
+---
+
+### Data Privacy and Protection
 
 
 
