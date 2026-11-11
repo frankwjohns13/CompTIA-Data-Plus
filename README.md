@@ -573,6 +573,14 @@ Contains groupings of individual attributes about a given subject and organizes 
 Text data that has a known finite number of categories. (Examples: Departments (HR, IT, Admin...) or Status (Up, Down, Suspended...))  
 *These categories can be expanded through table modifications.*
 
+**Data Classification Matrix**  
+| **Classification Term** | **Who's it for**     | **Description**                                  |
+|-------------------------|----------------------|--------------------------------------------------|
+| **Public**              | Anyone               | Meant for outside consumption                    |
+| **Internal**            | The organization     | Normal business use inside the company           |
+| **Sensitive**           | Limited internal use | Restricted to certain roles/teams                |
+| **Highly Sensitive**    | Tightly restricted   | Often driven by compliance (PII, PHI, CHD, etc.) |
+
 ---
 
 ### Common File Formats
@@ -594,6 +602,7 @@ Used to format documents that are designed to be displayed in a web-browser.
 ---
 
 ### Exam Essentials
+
 - Choose a data type based on the values you will store (and their limits).
 - You can often format values for display later; storage type still matters for accuracy and operations.
 - Structured = rows/columns; unstructured = free-form (text, images, audio, video); semi-structured = some structure but not fully tabular (e.g., email, JSON-ish content).
@@ -1446,7 +1455,7 @@ Combining techniques and operational experience will help mitigate, troubleshoot
 
 **Data Management:** Collection of architectures, policies, practices, and procedures defining how an organization manages data over its lifetime.
 
-**Data Governance:** Set of policies, procedure, and controls an organization develops to safeguard data. 
+**Data Governance:** Set of policies, procedures, and controls an organization develops to safeguard data. 
 
 **Integration:** The practice of consolidating data from disparate sources to improve organizational decision making. 
 - **Real-time Integration:** Provides the most current data available.
@@ -1469,10 +1478,10 @@ Combining techniques and operational experience will help mitigate, troubleshoot
 **Metadata:** Data that describes data. Provides business context you do not receive when examining the data itself.
 
 **Data Governance Roles:**
-- **Data Stewardship:** The act of developing policies and procedures for looking at an organization's data quality
+- **Data Stewardship:** Accountability for quality and appropriate use of data (policies/procedures support that)
 - **Organizational Data Steward:** The person responsible for data stewardship.
 - **Data Owner:** The senior business leader with overall responsibility for a specific data domain.
-- **Data Domain:** Data about a particular operational division of the orgainzation.
+- **Data Domain:** Data about a particular operational division of the organization.
 - **Subject Area Data Steward:** Works in the owner's organization and handles the day-to-day governance activities.
 - **Data Custodian:** Someone who implements technical controls that execute governance policies. 
 
@@ -1486,13 +1495,13 @@ Data compliance ensures that organizations handle, process, and store data while
 
 **Retention:** Policy-driven process that defines how long to hold data.
 
-**Jurisdictional Requirements:** There are four regulatory and compicance obligations to consider. 
+**Jurisdictional Requirements:** There are four regulatory and compliance obligations to consider. 
 - **Criminal Law:** Used to discourage people from acting in a way that negatively impacts society.
 - **Civil Law:** Used to resolve disputes between individuals, organizations, and goverments.
 - **Administrative Law:** Allows government administrative agencies to create regulations.
 - **Private Industry Regulations:** Aims to govern the activities of individuals and orgainzations without the force of law.
 
-**Replication:** Copies date from one environment to another.
+**Replication:** Copies data from one environment to another.
 
 **Storage:** A durable location that holds data at rest.
 - **Block Storage:** Directly accessible by the operating system.
@@ -1500,11 +1509,11 @@ Data compliance ensures that organizations handle, process, and store data while
 
 **Data Ethics:** Moral principles guiding responsible collection, use, and sharing of data. 
 
-**Payment Card Industry (PCI):** Nongovernmental body that governs car-based financial payments.
+**Payment Card Industry (PCI):** Nongovernmental body that governs card-based financial payments.
 
 **PCI Data Security Standard (PCI DSS):** Core information security standard.
 - Six principles:
-  - Building and maintaining a secure netowrk.
+  - Building and maintaining a secure network.
   - Protecting cardholder data.
   - Maintaining a vulnerability management program.
   - Implementing strong access controls
@@ -1535,7 +1544,7 @@ The 18 elements of PHI:
 - Fax numbers
 - Email address
 - Social Security Number (SSN)
-- Medica record numbers
+- Medical record numbers
 - Health plan beneficiary numbers
 - Account numbers
 - Certificate or license numbers
@@ -1565,9 +1574,9 @@ The 18 elements of PHI:
 
 Safeguarding and protecting an organizations data is extremely important.
 
-**Role-Based Access Controls (RBAC):** Grant access based on job functions vise to an individual. Access remains while in that job. 
+**Role-Based Access Controls (RBAC):** Grant access based on role rather than the individual. Access remains while in that job. 
 
-**Group Permissions:** Assigning access to a group title vise individuals. The, anyone in that group has access as long as they are a memeber.
+**Group Permissions:** Assigning access to a group title vise individuals. Then, anyone in that group has access as long as they are a member.
 
 **Encryption:** The process of encoding data with a key so that only authorized people can read it.
 
@@ -1575,13 +1584,13 @@ Safeguarding and protecting an organizations data is extremely important.
 
 **Data in Transit:** Data actively moving between one location and another. You should always encrypt data in transit.
 - **Transport Layer Security (TLS):** Used to secure data over a **Hypertext Transfer Protocol (HTTP)** creating **HTTPS**.
-- **Secure Copy Protocol (SCP):** Used with the **File Transfer Protocol (FTP)** to securely transfer files **(SFTP)**.
+- **Secure Copy Protocol (SCP)** or **Secure File Transfer Protocol (SFTP):** should be used when copying files between transactional and analytical servers.
 
 **Masking:** **Data Masking** and **Data Obfuscation** replaces sensitive information with synthetic values. 
 
 **Anonymization:** Alters, removes, or redacts personal data, making it impossible to identify an individual.
 - **De-identifying Data:** The process of removing identifiers that can compromise individual privacy.
-- **Reidentifying Data:** Take de-identified datasets and join them in a way that establishes the identify of individuals.
+- **Reidentifying Data:** Take de-identified datasets and join them in a way that establishes the identity of individuals.
 
 **Data Usage** and **Acceptable Use Policy (AUP):** Defines an individual's responsibilities when accessing, using, sharing, and removing organizational data.
 
@@ -1598,54 +1607,96 @@ Safeguarding and protecting an organizations data is extremely important.
 
 ### Data Quality Assurance Practices
 
+Organizations require high quality data to make appropriate decisions.
 
+**International Organization for Standardization (ISO):** Founded in 1947, ISO is an independent organization that makes and publishes global standards.
+- ISO 9001: Defines principles of a Quality Management System (QMS).
 
+**International Electrotechnical Commission (IEC):** Founded in 1906, collaborates with ISO when creating standards.
 
+**Source Control:** The combination of technologies and processes for managing change.
 
+**Source Code Control:** Since software is a big part of data, it is important to know if you are using the latest version. 
 
+**Issue Tracking:** When software changes occur, it is important to watch for issues, log them, and monitor them until they are corrected.
 
+**Unit Testing:** Ensuring individual components or functions of a program work as expected.
 
+**Requirement Testing:** Ensures the system meets design requirements.
 
+**Stress Testing:** Determines a system's breaking point. 
 
+**User Acceptance Test (UAT):** When the end user's validates a system based on requirements. 
 
+**Data Health Check:** Evaluation to detect inconsistencies, outliers, or other inaccuracies negatively impacting data integrity.
 
+**Automated Data Quality Monitoring:** Performs real-time data health checks as part of routine operations. 
 
+---
 
+### Exam Essentials
+- Define **data management** vs **data governance**, and roles: data owner, steward (organizational / subject-area), custodian.
+- Explain **integration** types: real-time vs batch; and artifacts: DFD, lineage, data dictionary, source of truth, versioning, metadata.
+- Summarize **compliance** ideas: retention, jurisdiction (criminal / civil / administrative / industry), replication, storage (block vs object), ethics.
+- Know major frameworks/rules at a concept level: **NIST**, **PCI DSS** (CHD vs SAD + six principle areas), **PII**, **PHI/HIPAA** (identifiers idea), audits, classification, incident reporting steps.
+- Contrast **privacy/protection** practices: RBAC vs group permissions, encryption (at rest / in transit; TLS/HTTPS), masking/obfuscation, anonymization vs de-identification (and re-identification risk), AUP, DUA, IRB.
+- Contrast **quality assurance** practices: ISO/IEC role, source control, issue tracking, unit / requirements / stress / UAT testing, data health checks, automated quality monitoring.
 
+---
 
+### Cliff Notes – Objectives Covered in Chapter 8
 
+**5.1 Explain data management concepts**
+- **Data management** — architectures, policies, practices over the data lifecycle  
+- **Data governance** — policies, procedures, controls that safeguard data  
+- **Integration** — real-time (current) vs batch (point-in-time snapshot)  
+- **Documentation** builds trust: **DFD** (how data moves), **lineage** (create → use → end), **data dictionary** (tables/indexes/views), **hierarchy**, **source of truth**, **versioning**, **metadata** (data about data)  
+- **Roles**
+  - **Data owner** — senior leader accountable for a domain  
+  - **Data steward** — day-to-day quality/governance (org-wide or subject-area)  
+  - **Data custodian** — implements technical controls  
 
+**5.2 Summarize concepts related to data compliance**
+- **NIST** — U.S. standards/guidelines (cyber, crypto, risk); nonregulatory  
+- **Retention** — how long data is kept by policy  
+- **Jurisdiction:** criminal, civil, administrative, private industry rules  
+- **Replication** — copy data elsewhere; **storage** — block vs object  
+- **Data ethics** — responsible collect / use / share  
+- **PCI DSS** — card data security; **CHD** (front: name, PAN, exp) vs **SAD** (track, PIN, CVV); six control focus areas  
+- **PII** — identifies a person (name, DOB, IDs, contact, credentials, etc.)  
+- **PHI** — health-related identifiers; **HIPAA** in the U.S.  
+- **Audit** — review practices, controls, compliance  
+- **Classification** — risk/sensitivity categories (learn the book’s four if listed)  
+- **Incident reporting steps:** verify → stop → assess impact → notify → correct → review  
+
+**5.3 Compare and contrast data privacy and protection practices**
+- **RBAC** — access by job role; **group permissions** — access by membership  
+- **Encryption** — key-based encoding; protect **at rest** and **in transit** (e.g. TLS → HTTPS)  
+- **Masking / obfuscation** — replace sensitive values with synthetic ones  
+- **Anonymization** — make re-identification effectively impossible  
+- **De-identification** — remove identifiers (re-identification may still be possible)  
+- **AUP** — acceptable use of organizational data  
+- **Sharing:** **DUA** (who, use limits, no further share, transfer method, protection); **IRB** for research-style review/approval  
+
+**5.4 Compare and contrast data quality assurance practices**
+- **ISO** (e.g. ISO 9001 QMS) and **IEC** collaboration on standards  
+- **Source / source-code control** — manage and know current versions  
+- **Issue tracking** — log and resolve problems after changes  
+- **Testing:** unit (components), requirements (meets design), stress (breaking point), **UAT** (end users validate)  
+- **Data health check** — find inconsistencies/outliers/integrity issues  
+- **Automated quality monitoring** — ongoing/real-time checks in operations  
+
+---
+
+**End of Chapter 8**
 
 
 </details> <!-- Ends Chapter 8 -->
-
-
-
 
   
 </details> <!-- Ends Chapters -->
 
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
