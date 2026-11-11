@@ -1563,11 +1563,40 @@ The 18 elements of PHI:
 
 ### Data Privacy and Protection
 
+Safeguarding and protecting an organizations data is extremely important.
 
+**Role-Based Access Controls (RBAC):** Grant access based on job functions vise to an individual. Access remains while in that job. 
 
+**Group Permissions:** Assigning access to a group title vise individuals. The, anyone in that group has access as long as they are a memeber.
 
+**Encryption:** The process of encoding data with a key so that only authorized people can read it.
 
+**Data at Rest:** Data that exists in permanent storage.
 
+**Data in Transit:** Data actively moving between one location and another. You should always encrypt data in transit.
+- **Transport Layer Security (TLS):** Used to secure data over a **Hypertext Transfer Protocol (HTTP)** creating **HTTPS**.
+- **Secure Copy Protocol (SCP):** Used with the **File Transfer Protocol (FTP)** to securely transfer files **(SFTP)**.
+
+**Masking:** **Data Masking** and **Data Obfuscation** replaces sensitive information with synthetic values. 
+
+**Anonymization:** Alters, removes, or redacts personal data, making it impossible to identify an individual.
+- **De-identifying Data:** The process of removing identifiers that can compromise individual privacy.
+- **Reidentifying Data:** Take de-identified datasets and join them in a way that establishes the identify of individuals.
+
+**Data Usage** and **Acceptable Use Policy (AUP):** Defines an individual's responsibilities when accessing, using, sharing, and removing organizational data.
+
+**Data Sharing:** Defining and documenting rules for sharing data.
+- **Data Use Agreement (DUA):** Contractual document for transferring private data between organizations.
+  - Identify who will receive the data.
+  - Identifying how the third party can use the data.
+  - Prohibiting the further distribution of the data.
+  - Establishes the method of transfer.
+  - Identifying how the recipient will protect the data.
+- **Institutional Review Board (IRB):** A board that reviews and approves sharing of data.
+
+---
+
+### Data Quality Assurance Practices
 
 
 
