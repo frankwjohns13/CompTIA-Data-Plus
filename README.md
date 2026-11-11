@@ -1482,7 +1482,7 @@ Combining techniques and operational experience will help mitigate, troubleshoot
 
 Data compliance ensures that organizations handle, process, and store data while adhering to legal, regulatory, and industry standards.
 
-**National Institute of Standards and Technology (NIST): A nonregulatory agency of the U.S. Department of Commerce that promotes innovation. They provide standards and guidelines on subject areas like cybersecurity, cryptography, and risk management. 
+**National Institute of Standards and Technology (NIST):** A nonregulatory agency of the U.S. Department of Commerce that promotes innovation. They provide standards and guidelines on subject areas like cybersecurity, cryptography, and risk management. 
 
 **Retention:** Policy-driven process that defines how long to hold data.
 
