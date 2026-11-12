@@ -10,6 +10,7 @@ ISBN: 9781394320912
 </details>
 
 ---
+
 <details>
 <summary><strong>Exam Objectives Summary</strong></summary>
 
@@ -142,11 +143,314 @@ ISBN: 9781394320912
 ---
 
 <details>
-<summary><strong>Chapters</strong></summary>
+<summary><strong>Exam Objectives Cliff Notes</strong></summary>
 
-Notes listed by chapters. 
+# Exam Objectives Cliff Notes
+
+## Domain 1.0 – Data Concepts and Environments (20%)
+
+### 1.1 Explain data concepts
+
+**Data building blocks**
+- **Data element:** attribute of a person, place, thing, or activity (often a column); values fill the rows
+- **Data type:** restricts what values an element can hold
+
+**Common data types**
+- **String** — character data (most common text type)
+- **Numeric** — integers (whole numbers) and floats/decimals (fractional)
+- **Boolean** — true/false (often 1/0)
+- **Date/time** — dates, times, timestamps
+- **Spatial** — geographic (Earth locations) vs geometric (2D shapes)
+- **Unique identifiers** — distinctly identify records/objects
+- **Currency** — numeric values formatted as money
+- **Binary / BLOB** — unstructured binary (files, images)
+- **Large text** — long free-form text (nuance/meaning; often treated as unstructured)
+
+**How data is organized**
+- **Structured** — consistent rows/columns (tabular)
+- **Unstructured** — images, audio, video, free descriptive text
+- **Semi-structured** — some structure, not fully tabular (e.g., email)
+
+**How data is classified**
+- **Quantitative** — numbers (“how many / how much?”)
+- **Qualitative** — text/traits (“what / why?”)
+- **Discrete** — countable whole values (e.g., number of children in a class)
+- **Continuous** — measured on a scale; can include decimals (height, weight, averages)
+- **Categorical** — finite set of categories/labels (set can expand)
+- **Dimensional** — fact tables (measurements) + dimension tables (attributes about the facts)
+
+**Common file formats**
+- **Text / CSV** — plain text; delimiter separates fields (CSV uses commas)
+- **JSON** — lightweight structure on text
+- **XML** — structure with more overhead than JSON
+- **HTML** — documents meant for web browsers
+
+**Database concepts**
+- **Relational DB:** entities, instances, ERDs, cardinality (unary/binary/ternary)
+- **Keys:** primary (unique row ID), synthetic PK, composite PK, foreign key, referential integrity
+- **Associative table:** resolves many-to-many relationships
+- **Nonrelational:** flexible, no fixed schema — key-value, document (e.g. JSON), column-family, graph
+- **OLTP:** transactional, normalized (1NF → 2NF → 3NF) to reduce duplication
+- **OLAP:** analytical, often denormalized for fast reads
+- **Schemas:** star (fact center + dimensions), snowflake (dimensions with subcategories)
+- **Dimensionality:** number of attributes; design options (effective dates, flags, etc.)
+- **DDL vs DML:** structure (CREATE/ALTER/DROP) vs data (SELECT/INSERT/UPDATE/DELETE)
+- **Query tools:** filter, sort, date/logical/aggregate functions, concatenation, nested queries
+- **Joins:** inner (matches only), outer (keep unmatched from one side), cross (Cartesian product)
+- **Optimization:** parameterization, indexes (avoid full table scans), temp tables/subsets, execution plans
 
 ---
+
+### 1.2 Identify types of data sources
+- **Internal** (owned systems) vs **external** (third-party / benchmarks / expansion)
+- **APIs** — structured system-to-system exchange
+- **Web services** — often over HTTP for apps that need remote data
+- **Web scraping** — programmatic site retrieval (e.g. Python, R)
+- **Files** — CSV, XLS, JSON, etc.
+- **Logs** — timestamps, IPs, methods, paths, status codes, bytes, user-agent
+- **Repositories**
+  - **Data silo** — department-controlled
+  - **Data warehouse** — integrated from many transactional systems
+  - **Data mart** — department-focused subset of a warehouse
+  - **Data lake** — raw data in native form
+  - **Data lakehouse** — lake flexibility + warehouse structure
+- **Human-in-the-loop:** surveys, observation, sampling
+
+---
+
+### 1.3 Identify infrastructure concepts
+- **Cloud reasons:** on-demand self-service, scalability, elasticity
+  - **Horizontal scaling** — add more servers
+  - **Vertical scaling** — increase capacity of existing servers
+- **Service models**
+  - **SaaS** — full application delivered by provider
+  - **IaaS** — basic compute/storage/network resources
+  - **PaaS** — platform to build/run your own apps
+- **Storage types**
+  - **Object** — unstructured data
+  - **Block** — fixed-size blocks (often VMs/databases)
+  - **File** — hierarchical structure
+  - Local vs shared storage for VMs/containers
+- **Deployment models:** private/on-premises, public (multitenant), hybrid
+- **Major public clouds:** AWS, Microsoft Azure, Google Cloud Platform
+
+---
+
+### 1.4 Identify common data analysis tools
+- **Spreadsheets:** rows/columns; calculations, charts, reports (e.g., Excel)
+- **Programming languages / environments**
+  - **R** — statistics and analytics; often used with an IDE
+  - **Python** — general-purpose; very common in analytics
+  - **Anaconda** — distribution/manager for Python/R packages and environments (not a language)
+  - **Scala** — object-oriented + functional; often used in big-data stacks
+  - **SAS** — statistical package/language; good for automating repetitive analytics tasks
+- **SQL & database tools**
+  - **DDL:** `CREATE`, `ALTER`, `DROP` (structure)
+  - **DML:** `SELECT`, `INSERT`, `UPDATE`, `DELETE` (data)
+  - Tools: Azure Data Studio, MySQL Workbench, Compass, DBeaver, Toad, SSMS
+- **Business intelligence (BI)**
+  - Ingest/clean → analyze → visualize → model/predict → report
+  - **Power BI** (Desktop, service/SaaS, mobile, Report Builder, Report Server)
+  - **Tableau** — strong visualization and multi-source ingestion
+  - **Looker** — Google cloud/SaaS analytics
+
+---
+
+### 1.5 Identify artificial intelligence (AI) concepts
+- **Artificial intelligence (AI):** systems designed to perform tasks that typically require human intelligence
+- **Machine learning (ML):** subset of AI; algorithms learn patterns from data (customer segmentation, log anomaly detection, sales forecasting)
+- **Deep learning:** specialized ML, often used for image, video, and audio analysis
+- **Generative AI:** creates new content (text, images, music, video); examples include ChatGPT, Claude, Midjourney
+- **Foundational models / large language models (LLMs):** large models trained on massive datasets that power many generative AI tools
+- **Robotic process automation (RPA):** software “bots” that automate repetitive, rule-based tasks (collect data, consolidate sources, format reports)
+
+---
+
+## Domain 2.0 – Data Acquisition and Preparation (22%)
+
+### 2.1 Given a scenario, use data acquisition methods
+- **Ingestion / ETL:** extract (from source) → transform (fit analytic design) → load (into analytic system)
+- **Initial load** vs **delta/incremental load**
+- Choose method by scenario: API, file drop, logs, scrape, survey/sample, warehouse/mart/lake feed
+
+---
+
+### 2.2 Given a scenario, perform data exploration to identify possible inconsistencies
+- **Duplication** — same data entered more than once
+- **Redundancy** — same elements stored in multiple places
+- **Invalid data** — outside allowed range
+- **Outliers** — values far from other observations
+- **Specification mismatch** — component outside acceptable limits
+- **Data type validation** — values match the expected type
+- **Completeness** — enough information for the business need
+- **Quality dimensions:** accuracy, completeness, consistency, timeliness, uniqueness, validity
+- **Where issues arise:** acquisition, manipulation, final report/dashboard prep
+- **Checks:** reasonable expectations, data profiling, audits, cross-validation; rules/metrics; automated validation
+
+---
+
+### 2.3 Given a scenario, perform appropriate data transformation and cleansing
+- **String manipulation / RegEx** — anchors, alternation (Boolean), character classes, literals, quantifiers, wildcards
+- **Conversion** — change units
+- **Augmentation** — add attributes not in the source
+- **Scaling** — change numeric range for comparability
+- **Grouping** — clustering (similar points); binning (continuous → categories)
+- **Reduction** — dimensionality (drop attributes); numerosity (reduce volume)
+- **Aggregation** — summarize raw data
+- **Transposition** — rows ↔ columns
+- **Exploding** — one complex row → multiple rows
+- **Standardization** — consistent format
+- **Imputation** — handle missing values (drop; zero; mean; mode; neighbor/closest average)
+- **Parsing** — split composite fields
+- **Merging** — combine different structures; **appending** — same structure; **blending** — combine at reporting layer
+- **Recoding** — map old values → new values
+- **Derived variables** — calculated from existing fields
+- **Deletion** — remove data
+
+---
+
+## Domain 3.0 – Data Analysis (24%)
+
+### 3.1 Given a set of requirements, determine the appropriate communication approach
+- Know the **audience** and **persona** (individual contributor → nontechnical managers → technical managers → product leadership → C-suite)
+- **C-suite** wants strategic insight, not method detail; technical managers want methods + sources
+- **Internal vs external** constituents → data sensitivity
+- **KPIs** = agreed metrics of performance (examples by CFO / CMO / HR)
+- Support understanding with **mock-ups** and **accessibility** (color, contrast, fonts)
+
+---
+
+### 3.2 Given a scenario, select the appropriate statistical method or function
+- **Population** vs **sample**; **parameter** (population) vs **statistic** (sample)
+- **Central tendency:** mean (average), median (middle after sort), mode (most frequent)
+- **Dispersion:** range (max − min), variance, standard deviation (spread from mean), quartiles, IQR (middle 50%)
+- **Distribution:** normal (symmetric about mean), skewed (mean ≠ median; right = positive, left = negative), bimodal (two peaks)
+- **CLT:** larger samples → sampling distribution of the mean tends toward normal
+- **Count, percentage, frequency** for basic magnitude/proportion
+- **Logical** (IS NULL, IS NOT NULL, OR…), **date**, **string** (UPPER, LOWER, INITCAP, TRIM) functions
+- Analysis types: **trend** (over time), **performance** (vs goals), **link** (relationships)
+- **EDA:** structure → representation → missing data → outliers → summary stats → assumptions
+- **Analytics types**
+  - **Descriptive** — summarize what happened (sums, totals, percentages, frequencies)
+  - **Inferential** — use a sample to draw conclusions about a larger population
+  - **Predictive** — estimate likelihood of future outcomes from historical data
+  - **Prescriptive** — recommend or simulate actions to optimize outcomes
+
+---
+
+### 3.3 Given a scenario, troubleshoot basic issues using the appropriate tool or method
+- Validate **data sources**: header (column names), footer (row counts), checksum (file integrity/size), network rules (delivery blocked?)
+- Use logical/string/date checks to find blanks, bad formats, and inconsistent text
+- EDA steps double as troubleshooting when results look wrong
+
+---
+
+## 4.0 - Visualization and Reporting (20%)
+
+### 4.1 Create effective visuals
+- **Line** — change over time
+- **Bar / stacked bar** — category comparison / composition
+- **Pie** — proportion of a whole (use sparingly)
+- **Scatter / bubble** — relationships (bubble adds a size variable)
+- **Histogram** — frequency distribution of numeric data
+- **Maps / heat maps / treemaps** — location, intensity, hierarchy
+- **Waterfall** — cumulative effect of gains/losses
+- **Word cloud** — relative word importance
+- **Pivot tables** — SUM, COUNT, AVERAGE, MAX, MIN summaries
+- **Infographics** — visuals over dense text
+
+**Design elements**
+- **Five Cs:** Control, Correctness, Clarity, Consistency, Concentration
+- Structure: cover page → executive summary → body; branding; limited color scheme (monochromatic / complementary)
+- Fonts: **serif** for print; **sans-serif** for screen; avoid ornate type
+- Trust elements: version numbers, data sources/dates, FAQs
+
+---
+
+### 4.2 Reports, dashboards, and delivery
+- **Report** = snapshot document; **dashboard** = interactive exploration
+- Delivery: **pull** (users fetch), **push** (auto-send), **blended** (store + notify)
+- **Static** vs **dynamic** content
+- **Frequency:** subscription, scheduled delivery, drill-down, ad hoc, recurring
+- **Compliance examples:** SOX (financial), OSHA (safety), HIPAA (health), PCI DSS (card data), risk/IT controls
+- **Tactical** (short-term) vs **research/strategic** reports
+- **Versioning** so everyone compares the same snapshot
+
+**Dashboard development**
+- Identify **consumers**; consider **SLA** for external users
+- **Scheduled** refresh vs **live/real-time** operational data
+- **Wireframe** (structure/function) → **mockup** (visual detail)
+- Set **access permissions**; gather feedback during design
+
+---
+
+### 4.3 Validate reporting accuracy
+- Problems: slow load, heavy ETL, low refresh, **stale** data
+- Mitigations: **filtering**, design **reviews**, **source validation**, watch **schema/API** changes, **monitoring alerts** on ETL/refresh failure
+
+---
+
+## Domain 5.0 – Data Governance (14%)
+
+### 5.1 Explain data management concepts
+- **Data management** — architectures, policies, practices over the data lifecycle
+- **Data governance** — policies, procedures, controls that safeguard data
+- **Integration** — real-time (current) vs batch (point-in-time snapshot)
+- **Documentation** builds trust:
+  - **DFD** — how data moves
+  - **Lineage** — create → use → end
+  - **Data dictionary** — tables/indexes/views
+  - **Hierarchy**, **source of truth**, **versioning**, **metadata** (data about data)
+- **Roles**
+  - **Data owner** — senior leader accountable for a domain
+  - **Data steward** — day-to-day quality/governance (org-wide or subject-area)
+  - **Data custodian** — implements technical controls
+
+---
+
+### 5.2 Summarize concepts related to data compliance
+- **NIST** — U.S. standards/guidelines (cyber, crypto, risk); nonregulatory
+- **Retention** — how long data is kept by policy
+- **Jurisdiction:** criminal, civil, administrative, private industry rules
+- **Replication** — copy data elsewhere; **storage** — block vs object
+- **Data ethics** — responsible collect / use / share
+- **PCI DSS** — card data security; **CHD** (front: name, PAN, exp) vs **SAD** (track, PIN, CVV); six control focus areas
+- **PII** — identifies a person (name, DOB, IDs, contact, credentials, etc.)
+- **PHI** — health-related identifiers; **HIPAA** in the U.S.
+- **Audit** — review practices, controls, compliance
+- **Classification:** Public → Internal → Sensitive → Highly Sensitive
+- **Incident reporting steps:** verify → stop → assess impact → notify → correct → review
+
+---
+
+### 5.3 Compare and contrast data privacy and protection practices
+- **RBAC** — access by job role; **group permissions** — access by membership
+- **Encryption** — key-based encoding; protect **at rest** and **in transit** (e.g. TLS → HTTPS; SCP/SFTP for secure file copy)
+- **Masking / obfuscation** — replace sensitive values with synthetic ones
+- **Anonymization** — make re-identification effectively impossible
+- **De-identification** — remove identifiers (re-identification may still be possible)
+- **AUP** — acceptable use of organizational data
+- **Sharing:** **DUA** (who, use limits, no further share, transfer method, protection); **IRB** for research-style review/approval
+
+---
+
+### 5.4 Compare and contrast data quality assurance practices
+- **ISO** (e.g. ISO 9001 QMS) and **IEC** collaboration on standards
+- **Source / source-code control** — manage and know current versions
+- **Issue tracking** — log and resolve problems after changes
+- **Testing:** unit (components), requirements (meets design), stress (breaking point), **UAT** (end users validate)
+- **Data health check** — find inconsistencies/outliers/integrity issues
+- **Automated quality monitoring** — ongoing/real-time checks in operations
+
+
+</details> <!-- Ends the Objectives Cliff Notes -->
+
+---
+
+<details>
+<summary><strong>Chapters</strong></summary>
+
+# Notes by chapters. 
 
 <details>
 <summary><strong>Chapter 1: Today's Data Analyst</strong></summary>
@@ -247,31 +551,6 @@ pull data from various systems, organize it, and generate a report formatted to 
 *Analytics tools* are used to automate much of the heavy data analytics process. 
 - Tools like Microsoft Excel and Google Sheets are used to create spreadsheets. 
 - Rstudio to help program in the R programming language
-
----
-
-### Cliff Notes – Objectives Covered in Chapter 1
-
-**1.5 Identify artificial intelligence (AI) concepts**
-- **Artificial intelligence (AI):** systems designed to perform tasks that typically require human intelligence
-- **Machine learning (ML):** subset of AI; algorithms learn patterns from data (customer segmentation, log anomaly detection, sales forecasting)
-- **Deep learning:** specialized ML, often used for image, video, and audio analysis
-- **Generative AI:** creates new content (text, images, music, video); examples include ChatGPT, Claude, Midjourney
-- **Foundational models / large language models (LLMs):** large models trained on massive datasets that power many generative AI tools
-- **Robotic process automation (RPA):** software “bots” that automate repetitive, rule-based tasks (collect data, consolidate sources, format reports)
-
-**3.2 Given a scenario, select the appropriate statistical method or function**  
-*(Chapter 1 introduces the analytics types that drive method choice; deeper stats come later.)*
-- **Descriptive analytics:** summarize what happened (sums, totals, percentages, frequencies)
-- **Inferential analytics:** use a sample to draw conclusions about a larger population
-- **Predictive analytics:** estimate likelihood of future outcomes from historical data
-- **Prescriptive analytics:** recommend or simulate actions to optimize outcomes
-
-**Related concepts (supporting context)**
-- **Analytics process:** Acquisition → Cleaning & Manipulation → Analysis (often starts with EDA) → Visualization → Reporting & Communication
-- **Data sources:** internal (e.g., sales reports) vs external (e.g., census data)
-- **Data governance:** organizational standards for data quality, control, accuracy, and security
-- **Common tools:** spreadsheets (Excel, Google Sheets); programming environments (e.g., RStudio for R)
 
 ---
 
@@ -411,72 +690,6 @@ Cloud computing is the delivery of services over a network
 
 ---
 
-### Exam Essentials
-
-**Role of spreadsheets:**  
-Spreadsheets are productivity software designed to create documents that organize any data type into rows and columns
-
-**How programming languages are used:**  
-Programming languages are used to create analysis tools
-
-**Know how analysts and developers interact with databases:**  
-- They use SQL to interact with databases.
-- Analysts lean on DML (SELECT/INSERT/UPDATE/DELETE);
-- Schema work is DDL (CREATE/ALTER/DROP).
-- Some materials also call SELECT DQL.
-
-**Role of Business Intelligence:**  
-Tools used to ingest and clean data, statistical analysis, visualization, produce models, make predictions, and communicate and report.
-
-**Role of Cloud Providers:**  
-Deliver scalability, on-demand infrastructure.
-
-**Different cloud and on-premises models:**  
-Private, public, and hybrid
-
-**Types of data storage and use cases:**  
-Cloud storage, object storage, file storage
-
----
-
-### Cliff Notes – Objectives Covered in Chapter 2
-
-**1.4 Identify common data analysis tools**
-- **Spreadsheets:** rows/columns; calculations, charts, reports (e.g., Excel)
-- **Programming languages / environments**
-  - **R** — statistics and analytics; often used with an IDE
-  - **Python** — general-purpose; very common in analytics
-  - **Anaconda** — distribution/manager for Python/R packages and environments (not a language)
-  - **Scala** — object-oriented + functional; often used in big-data stacks
-  - **SAS** — statistical package/language; good for automating repetitive analytics tasks
-- **SQL & database tools**
-  - **DDL:** `CREATE`, `ALTER`, `DROP` (structure)
-  - **DML:** `SELECT`, `INSERT`, `UPDATE`, `DELETE` (data)
-  - Tools: Azure Data Studio, MySQL Workbench, Compass, DBeaver, Toad, SSMS
-- **Business intelligence (BI)**
-  - Ingest/clean → analyze → visualize → model/predict → report
-  - **Power BI** (Desktop, service/SaaS, mobile, Report Builder, Report Server)
-  - **Tableau** — strong visualization and multi-source ingestion
-  - **Looker** — Google cloud/SaaS analytics
-
-**1.3 Identify infrastructure concepts**
-- **Cloud reasons:** on-demand self-service, scalability, elasticity
-  - **Horizontal scaling** — add more servers
-  - **Vertical scaling** — increase capacity of existing servers
-- **Service models**
-  - **SaaS** — full application delivered by provider
-  - **IaaS** — basic compute/storage/network resources
-  - **PaaS** — platform to build/run your own apps
-- **Storage types**
-  - **Object** — unstructured data
-  - **Block** — fixed-size blocks (often VMs/databases)
-  - **File** — hierarchical structure
-  - Local vs shared storage for VMs/containers
-- **Deployment models:** private/on-premises, public (multitenant), hybrid
-- **Major public clouds:** AWS, Microsoft Azure, Google Cloud Platform
-
----
-
 **End of Chapter 2**
 
 </details> <!-- Ends Chapter 2 -->
@@ -598,60 +811,6 @@ Facilitates adding structure to a text file with more overhead than JSON.
 
 **Hypertext Markup Language (HTML)**  
 Used to format documents that are designed to be displayed in a web-browser.
-
----
-
-### Exam Essentials
-
-- Choose a data type based on the values you will store (and their limits).
-- You can often format values for display later; storage type still matters for accuracy and operations.
-- Structured = rows/columns; unstructured = free-form (text, images, audio, video); semi-structured = some structure but not fully tabular (e.g., email, JSON-ish content).
-- Quantitative = numeric (“how many / how much”); qualitative = descriptive (“what / why”).
-- Discrete = countable whole values; continuous = measurable values that can include decimals.
-- Categorical = limited set of labels/categories (can grow over time).
-- Dimensional models use fact tables (measurements) and dimension tables (context about the facts).
-- Know common file formats: delimited text/CSV, JSON (light structure), XML (heavier structure), HTML (web display).
-
----
-
-### Cliff Notes – Objectives Covered in Chapter 3
-
-**1.1 Explain data concepts**
-
-**Data building blocks**
-- **Data element:** attribute of a person, place, thing, or activity (often a column); values fill the rows
-- **Data type:** restricts what values an element can hold
-
-**Common data types**
-- **String** — character data (most common text type)
-- **Numeric** — integers (whole numbers) and floats/decimals (fractional)
-- **Boolean** — true/false (often 1/0)
-- **Date/time** — dates, times, timestamps
-- **Spatial** — geographic (Earth locations) vs geometric (2D shapes)
-- **Unique identifiers** — distinctly identify records/objects
-- **Currency** — numeric values formatted as money
-- **Binary / BLOB** — unstructured binary (files, images)
-- **Large text** — long free-form text (nuance/meaning; often treated as unstructured)
-
-**How data is organized**
-- **Structured** — consistent rows/columns (tabular)
-- **Unstructured** — images, audio, video, free descriptive text
-- **Semi-structured** — some structure, not fully tabular (e.g., email)
-
-**How data is classified**
-- **Quantitative** — numbers (“how many / how much?”)
-- **Qualitative** — text/traits (“what / why?”)
-- **Discrete** — countable whole values (e.g., number of children in a class)
-- **Continuous** — measured on a scale; can include decimals (height, weight, averages)
-- **Categorical** — finite set of categories/labels (set can expand)
-- **Dimensional** — fact tables (measurements) + dimension tables (attributes about the facts)
-
-**Common file formats**
-- **Text / CSV** — plain text; delimiter separates fields (CSV uses commas)
-- **JSON** — lightweight structure on text
-- **XML** — structure with more overhead than JSON
-- **HTML** — documents meant for web browsers
-
 
 ---
 
@@ -792,60 +951,9 @@ Once the database is built, you use the Data Manipulation Language (DML) to INSE
 
 ---
 
-### Exam Essentials
-- Contrast **OLTP** (day-to-day transactions, normalized) with **OLAP** (analysis, often denormalized).
-- Explain **normalization** goals and the idea of 1NF / 2NF / 3NF (reduce duplication, depend on the key).
-- Describe **star** vs **snowflake** schemas and the roles of fact vs dimension tables.
-- Identify **relational** vs **nonrelational** models (key-value, document, column-family, graph).
-- Know **primary key**, **foreign key**, **composite key**, **referential integrity**.
-- Trace **ETL**: extract → transform → load (initial vs delta/incremental).
-- Differentiate **internal** vs **external** sources and methods: APIs, web services, web scraping, files, logs, surveys/observation/sampling.
-- Distinguish repositories: **silo**, **warehouse**, **mart**, **lake**, **lakehouse**.
-- Use **DDL** (CREATE/ALTER/DROP) vs **DML** (SELECT/INSERT/UPDATE/DELETE).
-- Apply filtering, sorting, joins (inner/outer/cross), aggregates, and basic query optimization (indexes vs full table scans).
-
----
-
-### Cliff Notes – Objectives Covered in Chapter 4
-
-**1.1 Explain data concepts**
-- **Relational DB:** entities, instances, ERDs, cardinality (unary/binary/ternary)
-- **Keys:** primary (unique row ID), synthetic PK, composite PK, foreign key, referential integrity
-- **Associative table:** resolves many-to-many relationships
-- **Nonrelational:** flexible, no fixed schema
-  - Key-value, document (e.g. JSON), column-family, graph
-- **OLTP:** transactional, normalized (1NF → 2NF → 3NF) to reduce duplication
-- **OLAP:** analytical, often denormalized for fast reads
-- **Schemas:** star (fact center + dimensions), snowflake (dimensions with subcategories)
-- **Dimensionality:** number of attributes; design options (effective dates, flags, etc.)
-- **DDL vs DML:** structure (CREATE/ALTER/DROP) vs data (SELECT/INSERT/UPDATE/DELETE)
-- **Query tools:** filter, sort, date/logical/aggregate functions, concatenation, nested queries
-- **Joins:** inner (matches only), outer (keep unmatched from one side), cross (Cartesian product)
-- **Optimization:** parameterization, indexes (avoid full table scans), temp tables/subsets, execution plans
-
-**1.2 Identify types of data sources**
-- **Internal** (owned systems) vs **external** (third-party / benchmarks / expansion)
-- **APIs** — structured system-to-system exchange
-- **Web services** — often over HTTP for apps that need remote data
-- **Web scraping** — programmatic site retrieval (e.g. Python, R)
-- **Files** — CSV, XLS, JSON, etc.
-- **Logs** — timestamps, IPs, methods, paths, status codes, bytes, user-agent
-- **Repositories**
-  - Data silo — department-controlled
-  - Data warehouse — integrated from many transactional systems
-  - Data mart — department-focused subset of a warehouse
-  - Data lake — raw data in native form
-  - Data lakehouse — lake flexibility + warehouse structure
-- **Human-in-the-loop:** surveys, observation, sampling
-
-**2.1 Given a scenario, use data acquisition methods**
-- **Ingestion / ETL:** extract (from source) → transform (fit analytic design) → load (into analytic system)
-- **Initial load** vs **delta/incremental load**
-- Choose method by scenario: API, file drop, logs, scrape, survey/sample, warehouse/mart/lake feed
-
+**End of Chapter 4**
 
 </details> <!-- Ends Chapter 4 -->
-
 
 ---
 
@@ -951,51 +1059,6 @@ for irregularities.
 - **Data Profiling:** Statistical approach that looks for discrepancies including missing values that occur infrequently, too frequently, or should be eliminated.
 - **Data Audits:** Help you understand whether or not you have the data your business needs to operate.
 - **Cross-validation:** A statistical technique that evaluates how well predictive models perform. 
-
----
-
-### Exam Essentials
-- Spot common inconsistencies: duplication, redundancy, invalid values, outliers, type mismatches, incompleteness.
-- Explain why **missing data** and **outliers** matter and how they affect analysis.
-- Apply transformation/cleansing: string work (including RegEx ideas), conversion, scaling, binning/clustering, aggregation, transposition, explode, standardize, impute, parse, merge/append, recode, derive, delete.
-- Contrast **dimensionality reduction** (fewer attributes) vs **numerosity reduction** (less volume/rows).
-- Contrast **merging** vs **appending** vs **data blending**.
-- Name the six quality dimensions: accuracy, completeness, consistency, timeliness, uniqueness, validity.
-- Describe ways to check quality: reasonable expectations, profiling, audits, cross-validation; use rules/metrics and automated validation where possible.
-
----
-
-### Cliff Notes – Objectives Covered in Chapter 5
-
-**2.2 Given a scenario, perform data exploration to identify possible inconsistencies**
-- **Duplication** — same data entered more than once  
-- **Redundancy** — same elements stored in multiple places  
-- **Invalid data** — outside allowed range  
-- **Outliers** — values far from other observations  
-- **Specification mismatch** — component outside acceptable limits  
-- **Data type validation** — values match the expected type  
-- **Completeness** — enough information for the business need  
-- **Quality dimensions:** accuracy, completeness, consistency, timeliness, uniqueness, validity  
-- **Where issues arise:** acquisition, manipulation, final report/dashboard prep  
-- **Checks:** reasonable expectations, data profiling, audits, cross-validation; rules/metrics; automated validation  
-
-**2.3 Given a scenario, perform appropriate data transformation and cleansing**
-- **String manipulation / RegEx** — anchors, alternation (Boolean), character classes, literals, quantifiers, wildcards  
-- **Conversion** — change units  
-- **Augmentation** — add attributes not in the source  
-- **Scaling** — change numeric range for comparability  
-- **Grouping** — clustering (similar points); binning (continuous → categories)  
-- **Reduction** — dimensionality (drop attributes); numerosity (reduce volume)  
-- **Aggregation** — summarize raw data  
-- **Transposition** — rows ↔ columns  
-- **Exploding** — one complex row → multiple rows  
-- **Standardization** — consistent format  
-- **Imputation** — handle missing values (drop; zero; mean; mode; neighbor/closest average)  
-- **Parsing** — split composite fields  
-- **Merging** — combine different structures; **appending** — same structure; **blending** — combine at reporting layer  
-- **Recoding** — map old values → new values  
-- **Derived variables** — calculated from existing fields  
-- **Deletion** — remove data
 
 ---
 
@@ -1154,46 +1217,6 @@ An exploratory data analysis (EDA) uses descriptive statistics to summarize the 
   - Identify outliers
   - Summarize statistics
   - Check assumptions
-
----
-
-### Exam Essentials
-
-- Match communication to **audience** (individual contributors, nontechnical managers, technical managers, product leadership, C-suite) and sensitivity (internal vs external).
-- Use **KPIs** appropriate to the role (finance, marketing, HR examples).
-- Distinguish **population / parameter** vs **sample / statistic**; know observation, variable, sample size.
-- Calculate/interpret **central tendency**: mean, median (odd/even rules), mode.
-- Describe **dispersion**: range, variance, standard deviation, quartiles, IQR; normal vs skewed (right/positive, left/negative) vs bimodal; idea of CLT.
-- Choose analysis type: **trend**, **performance**, **link**; use **EDA** steps (structure, representation, missing data, outliers, summary stats, assumptions).
-- Use logical vs string (and date) functions for validation/cleaning.
-- Troubleshoot sources with header/footer checks, checksums, and network/path issues.
-
----
-
-### Cliff Notes
-
-**3.1 Given a set of requirements, determine the appropriate communication approach**
-- Know the **audience** and **persona** (individual contributor → C-suite).
-- **C-suite** wants strategic insight, not method detail; technical managers want methods + sources.
-- **Internal vs external** constituents → data sensitivity.
-- **KPIs** = agreed metrics of performance (examples by CFO / CMO / HR).
-- Support understanding with **mock-ups** and **accessibility** (color, contrast, fonts).
-
-**3.2 Given a scenario, select the appropriate statistical method or function**
-- **Population** vs **sample**; **parameter** (population) vs **statistic** (sample).
-- **Central tendency:** mean (average), median (middle after sort), mode (most frequent).
-- **Dispersion:** range (max − min), variance, standard deviation (spread from mean), quartiles, IQR (middle 50%).
-- **Distribution:** normal (symmetric about mean), skewed (mean ≠ median; right = positive, left = negative), bimodal (two peaks).
-- **CLT:** larger samples → sampling distribution of the mean tends toward normal.
-- **Count, percentage, frequency** for basic magnitude/proportion.
-- **Logical** (IS NULL, IS NOT NULL, OR…), **date**, **string** (UPPER, LOWER, INITCAP, TRIM) functions.
-- Analysis types: **trend** (over time), **performance** (vs goals), **link** (relationships).
-- **EDA:** structure → representation → missing data → outliers → summary stats → assumptions.
-
-**3.3 Given a scenario, troubleshoot basic issues using the appropriate tool or method**
-- Validate **data sources**: header (column names), footer (row counts), checksum (file integrity/size), network rules (delivery blocked?).
-- Use logical/string/date checks to find blanks, bad formats, and inconsistent text.
-- EDA steps double as troubleshooting when results look wrong.
 
 ---
 
@@ -1370,62 +1393,6 @@ Combining techniques and operational experience will help mitigate, troubleshoot
 **Data Structure:** Changes to data structure resulting from changes to the data schema, may affect how the API behaves. 
 
 **Monitoring Alerts:** Raise exceptions when the ETL or data refresh process fails. 
-
----
-
-### Exam Essentials
-
-### Exam Essentials
-- Start visualization work by identifying **audience**, goals, and sensitivity (same idea as Ch. 6 communication).
-- Contrast **report** (point-in-time document) vs **dashboard** (interactive exploration).
-- Match **chart type** to the question (trend → line; parts of whole → pie; categories → bar; distribution → histogram; two numerics → scatter; etc.).
-- Apply the **five Cs**: control, correctness, clarity, consistency, concentration.
-- Know delivery modes: **push / pull / blended**; **static vs dynamic**; subscription, scheduled, ad hoc, recurring, compliance.
-- Use design basics: cover/summary, branding, color schemes, layout, fonts (serif print / sans-serif screen), versioning, source citations.
-- Dashboard process: consumers → data sources (live vs scheduled) → wireframe → mockup → access permissions.
-- Validate reports: filtering, reviews, source checks, structure/API impacts, monitoring/ETL alerts; watch load time, stale data, slow refresh.
-
----
-
-### Cliff Notes – Objectives Covered in Chapter 7
-
-**Communication & design (ties to 3.1)**
-- Know **who** the report/dashboard is for before choosing visuals or KPIs.
-- **Report** = snapshot document; **dashboard** = interactive exploration.
-- Delivery: **pull** (users fetch), **push** (auto-send), **blended** (store + notify).
-- **Five Cs:** Control, Correctness, Clarity, Consistency, Concentration.
-- Structure: cover page → executive summary → body; branding; limited color scheme (monochromatic / complementary).
-- Fonts: **serif** for print; **sans-serif** for screen; avoid ornate type.
-- Trust elements: version numbers, data sources/dates, FAQs.
-
-**Choosing visuals (analysis communication)**
-- **Line** — change over time  
-- **Bar / stacked bar** — category comparison / composition  
-- **Pie** — proportion of a whole (use sparingly)  
-- **Scatter / bubble** — relationships (bubble adds a size variable)  
-- **Histogram** — frequency distribution of numeric data  
-- **Maps / heat maps / treemaps** — location, intensity, hierarchy  
-- **Waterfall** — cumulative effect of gains/losses  
-- **Word cloud** — relative word importance  
-- **Pivot tables** — SUM, COUNT, AVERAGE, MAX, MIN summaries  
-- **Infographics** — visuals over dense text  
-
-**Dashboard development**
-- Identify **consumers**; consider **SLA** for external users.
-- **Scheduled/static** refresh vs **live/real-time** operational data.
-- **Wireframe** (structure/function) → **mockup** (visual detail).
-- Set **access permissions**; gather feedback during design.
-
-**Delivery & report types**
-- **Static** vs **dynamic** content.
-- **Frequency:** subscription, scheduled delivery, drill-down, ad hoc, recurring.
-- **Compliance examples:** SOX (financial), OSHA (safety), HIPAA (health), PCI DSS (card data), risk/IT controls.
-- **Tactical** (short-term) vs **research/strategic** reports.
-- **Versioning** so everyone compares the same snapshot.
-
-**Validation / troubleshooting (ties to 3.3)**
-- Problems: slow load, heavy ETL, low refresh, **stale** data.
-- Mitigations: **filtering**, design **reviews**, **source validation**, watch **schema/API** changes, **monitoring alerts** on ETL/refresh failure.
 
 ---
 
@@ -1634,60 +1601,6 @@ Organizations require high quality data to make appropriate decisions.
 
 ---
 
-### Exam Essentials
-- Define **data management** vs **data governance**, and roles: data owner, steward (organizational / subject-area), custodian.
-- Explain **integration** types: real-time vs batch; and artifacts: DFD, lineage, data dictionary, source of truth, versioning, metadata.
-- Summarize **compliance** ideas: retention, jurisdiction (criminal / civil / administrative / industry), replication, storage (block vs object), ethics.
-- Know major frameworks/rules at a concept level: **NIST**, **PCI DSS** (CHD vs SAD + six principle areas), **PII**, **PHI/HIPAA** (identifiers idea), audits, classification, incident reporting steps.
-- Contrast **privacy/protection** practices: RBAC vs group permissions, encryption (at rest / in transit; TLS/HTTPS), masking/obfuscation, anonymization vs de-identification (and re-identification risk), AUP, DUA, IRB.
-- Contrast **quality assurance** practices: ISO/IEC role, source control, issue tracking, unit / requirements / stress / UAT testing, data health checks, automated quality monitoring.
-
----
-
-### Cliff Notes – Objectives Covered in Chapter 8
-
-**5.1 Explain data management concepts**
-- **Data management** — architectures, policies, practices over the data lifecycle  
-- **Data governance** — policies, procedures, controls that safeguard data  
-- **Integration** — real-time (current) vs batch (point-in-time snapshot)  
-- **Documentation** builds trust: **DFD** (how data moves), **lineage** (create → use → end), **data dictionary** (tables/indexes/views), **hierarchy**, **source of truth**, **versioning**, **metadata** (data about data)  
-- **Roles**
-  - **Data owner** — senior leader accountable for a domain  
-  - **Data steward** — day-to-day quality/governance (org-wide or subject-area)  
-  - **Data custodian** — implements technical controls  
-
-**5.2 Summarize concepts related to data compliance**
-- **NIST** — U.S. standards/guidelines (cyber, crypto, risk); nonregulatory  
-- **Retention** — how long data is kept by policy  
-- **Jurisdiction:** criminal, civil, administrative, private industry rules  
-- **Replication** — copy data elsewhere; **storage** — block vs object  
-- **Data ethics** — responsible collect / use / share  
-- **PCI DSS** — card data security; **CHD** (front: name, PAN, exp) vs **SAD** (track, PIN, CVV); six control focus areas  
-- **PII** — identifies a person (name, DOB, IDs, contact, credentials, etc.)  
-- **PHI** — health-related identifiers; **HIPAA** in the U.S.  
-- **Audit** — review practices, controls, compliance  
-- **Classification** — risk/sensitivity categories (learn the book’s four if listed)  
-- **Incident reporting steps:** verify → stop → assess impact → notify → correct → review  
-
-**5.3 Compare and contrast data privacy and protection practices**
-- **RBAC** — access by job role; **group permissions** — access by membership  
-- **Encryption** — key-based encoding; protect **at rest** and **in transit** (e.g. TLS → HTTPS)  
-- **Masking / obfuscation** — replace sensitive values with synthetic ones  
-- **Anonymization** — make re-identification effectively impossible  
-- **De-identification** — remove identifiers (re-identification may still be possible)  
-- **AUP** — acceptable use of organizational data  
-- **Sharing:** **DUA** (who, use limits, no further share, transfer method, protection); **IRB** for research-style review/approval  
-
-**5.4 Compare and contrast data quality assurance practices**
-- **ISO** (e.g. ISO 9001 QMS) and **IEC** collaboration on standards  
-- **Source / source-code control** — manage and know current versions  
-- **Issue tracking** — log and resolve problems after changes  
-- **Testing:** unit (components), requirements (meets design), stress (breaking point), **UAT** (end users validate)  
-- **Data health check** — find inconsistencies/outliers/integrity issues  
-- **Automated quality monitoring** — ongoing/real-time checks in operations  
-
----
-
 **End of Chapter 8**
 
 
@@ -1698,10 +1611,98 @@ Organizations require high quality data to make appropriate decisions.
 
 ---
 
+<details>
+<summary><strong>Exam Essentials (All Domains)</summary> 
+
+# Exam Essentials (All Domains)
+
+## Domain 1.0 – Data Concepts and Environments
+
+**Tools and infrastructure**
+- Spreadsheets organize data in rows and columns for calculations, charts, and reports.
+- Programming languages (Python, R, etc.) build and automate analysis; Anaconda manages packages/environments (not a language).
+- BI tools ingest, clean, analyze, visualize, model, and report (Power BI, Tableau, Looker).
+- Cloud delivers on-demand, scalable infrastructure; models are private, public, and hybrid.
+- Storage types: object, block, file (plus local vs shared for VMs/containers).
+- Service models: SaaS (full app), IaaS (compute/storage), PaaS (build/run platform).
+
+**Data concepts**
+- Choose a **data type** by the values you store; display formatting is separate from storage type.
+- **Structured** = rows/columns; **unstructured** = free-form (text, images, audio, video); **semi-structured** = some structure, not fully tabular (e.g., email, JSON-style).
+- **Quantitative** = numeric (“how many / how much”); **qualitative** = descriptive (“what / why”).
+- **Discrete** = countable whole values; **continuous** = measurable, can include decimals.
+- **Categorical** = limited labels/categories (set can grow).
+- **Dimensional** models: fact tables (measurements) + dimension tables (context).
+- File formats: delimited text/CSV, JSON (light structure), XML (heavier structure), HTML (web display).
+
+**Databases**
+- **OLTP** = day-to-day transactions, normalized; **OLAP** = analysis, often denormalized.
+- Normalization (1NF → 2NF → 3NF) reduces duplication; depend on the key.
+- **Star** = fact center + dimensions; **snowflake** = dimensions with subcategories.
+- **Relational** vs **nonrelational** (key-value, document, column-family, graph).
+- **Primary key**, **foreign key**, **composite key**, **referential integrity**.
+- **DDL** (CREATE/ALTER/DROP) vs **DML** (SELECT/INSERT/UPDATE/DELETE); some materials call SELECT **DQL**.
+- Filtering, sorting, joins (inner/outer/cross), aggregates; optimize with indexes (avoid full table scans).
+
+**Sources and AI**
+- **Internal** vs **external** sources; methods include APIs, web services, scraping, files, logs, surveys/observation/sampling.
+- Repositories: **silo**, **warehouse**, **mart**, **lake**, **lakehouse**.
+- AI hierarchy: AI → ML → deep learning; generative AI / LLMs; RPA = rule-based bots.
+
+---
+
+## Domain 2.0 – Data Acquisition and Preparation
+
+- **ETL:** extract → transform → load; **initial** vs **delta/incremental** load.
+- Spot inconsistencies: duplication, redundancy, invalid values, outliers, type mismatches, incompleteness.
+- Missing data and outliers matter because they skew analysis and decisions.
+- Transformations: string/RegEx work, conversion, scaling, binning/clustering, aggregation, transposition, explode, standardize, impute, parse, merge/append, recode, derive, delete.
+- **Dimensionality reduction** = fewer attributes; **numerosity reduction** = less volume/rows.
+- **Merging** (different structures) vs **appending** (same structure) vs **blending** (at reporting layer).
+- Six quality dimensions: **accuracy, completeness, consistency, timeliness, uniqueness, validity**.
+- Quality checks: reasonable expectations, profiling, audits, cross-validation; rules/metrics; automated validation.
+
+---
+
+## Domain 3.0 – Data Analysis
+
+- Match communication to **audience** (individual contributor → managers → product leadership → C-suite) and **sensitivity** (internal vs external).
+- Use **KPIs** suited to the role (finance, marketing, HR examples).
+- **Population / parameter** vs **sample / statistic**; know observation, variable, sample size.
+- Central tendency: **mean**, **median** (odd/even rules), **mode**.
+- Dispersion: range, variance, standard deviation, quartiles, IQR; normal vs skewed (right/positive, left/negative) vs bimodal; idea of CLT.
+- Analysis types: **trend**, **performance**, **link**; run **EDA** (structure → representation → missing → outliers → summary → assumptions).
+- Analytics types: descriptive, inferential, predictive, prescriptive.
+- Logical / string / date functions support validation and cleaning.
+- Troubleshoot sources with header/footer checks, checksums, and network/path issues.
+
+---
+
+## 4.0 - Visualization and Reporting
+
+- Start with **audience**, goals, and sensitivity.
+- **Report** = point-in-time document; **dashboard** = interactive exploration.
+- Match chart to question: trend → line; parts of whole → pie; categories → bar; distribution → histogram; two numerics → scatter; etc.
+- **Five Cs:** control, correctness, clarity, consistency, concentration.
+- Delivery: **push / pull / blended**; static vs dynamic; subscription, scheduled, ad hoc, recurring, compliance.
+- Design: cover/summary, branding, color schemes, layout, fonts (serif print / sans-serif screen), versioning, source citations.
+- Dashboard process: consumers → data sources (live vs scheduled) → wireframe → mockup → access permissions.
+- Validate reports: filtering, reviews, source checks, schema/API impacts, monitoring/ETL alerts; watch load time, stale data, slow refresh.
+
+---
+
+## Domain 5.0 – Data Governance
+
+- **Data management** (lifecycle practices) vs **data governance** (safeguarding policies/controls).
+- Roles: **owner** (accountable), **steward** (day-to-day quality/governance), **custodian** (technical controls).
+- Integration: **real-time** vs **batch**; artifacts: DFD, lineage, data dictionary, source of truth, versioning, metadata.
+- Compliance: retention; jurisdiction (criminal / civil / administrative / industry); replication; storage (block vs object); ethics.
+- Know at concept level: **NIST**, **PCI DSS** (CHD vs SAD + control areas), **PII**, **PHI/HIPAA**, audits, classification (**Public → Internal → Sensitive → Highly Sensitive**), incident steps (verify → stop → assess → notify → correct → review).
+- Privacy/protection: RBAC vs group permissions; encryption at rest / in transit (TLS/HTTPS; SCP/SFTP); masking/obfuscation; anonymization vs de-identification (re-identification risk); AUP; DUA; IRB.
+- Quality assurance: ISO/IEC; source control; issue tracking; unit / requirements / stress / UAT testing; data health checks; automated quality monitoring.
 
 
+</details> <!-- Ends Exam Essentials --> 
 
-
-
-
+---
 
